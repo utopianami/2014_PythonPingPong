@@ -1,10 +1,14 @@
 2014_PythonPingPong
 ===================
 
-Next PingPong
-#표시는 앞으로 해야될 일 
+Next PingPong : Next탁구 승패 기록 / 리그 점수제
 
-0227_utopianami
+양식
+1. 날짜 + 작성자
+2. '#'표시는 앞으로 해야될 일 
+
+
+	- 0227_utopianami
 	- 서버 첫 화면 index page setting : main.html
 	- 회원가입
 		* singin.html -> signUp.html로 변경 (회원가입은 signUp, login == siginIn)
