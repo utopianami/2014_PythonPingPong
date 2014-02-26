@@ -7,8 +7,11 @@ class Player(db.Model):
     playerName = db.Column(db.String(80), unique=True)
     playerPassword = db.Column(db.String(80))
     soloRank = db.Column(db.Integer)
-    #soloRank = db.Column(db.Integer, db.ForeignKey('rankTable.id'))
-    teamRank = db.Column(db.INTEGER)
+    teamRank = db.Column(db.Integer)
+    history = db.relationship('Result', backref='player', lazy='dynamic'
+                                                               ''
+                                                               ' '
+                                                               '')
 
 
 

@@ -11,8 +11,8 @@ def saveResult():
     player1Score = request.form['player1Score']
     player2Score = request.form['player2Score']
 
-    player1 = User.query.filter_by(userId = session['user_id']).first()
-    player2 = User.query.filter_by(userName = request.form['player2Name']).first()
+    player1 = Player.query.filter_by(userId = session['user_id']).first()
+    player2 = Player.query.filter_by(userName = request.form['player2Name']).first()
 
     if player1Score > player2Score:
         result = Result(player1.getId(), player2.getId(), player1Score, player2Score)

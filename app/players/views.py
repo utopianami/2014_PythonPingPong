@@ -23,15 +23,15 @@ def register():
 @mod.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        userName = request.form['playerName']
+        playerName = request.form['playerName']
         password = request.form['playerPassword']
-        user = User.query.filter_by(userEmail = userName).first()
+        player = Player.query.filter_by(playerName = playerName).first()
 
-        if user == None:
-            return 'alertNoId'
-        if user.userPassword == password:
-            session['player_id'] = user.getId()
+        if player == None:
+            return 'Wrong'
+        if player.playerName == password:
+            session['player_id'] = player.getId()
             return redirect(url_for('index'))
 
-    return 'alertWrongPassword'
+    return 'Wrong'
 
