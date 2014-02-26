@@ -9,15 +9,16 @@ mod = Blueprint('players', __name__, url_prefix='/players')
 def signUp():
     return render_template('signUp.html')
 
-@mod.route('/register', methods=['POST'])
+@mod.route('/register', methods=["POST"])
 def register():
-    if (Player.query.filter_by(playerName = request.form['playerName']).first()):
-        return 'exist'
-    else:
-        newPlayer = Player(request.form['playerName'], request.form['playerPassword'])
-        db.session.add(newPlayer)
-        db.session.commit()
-
+    if request.method == "POST":
+        isExist = Player.query.filter_by(playerName = request.form['playerName']).first()
+        if isExist is not None:
+            return 'exist'
+        else:
+            newPlayer = Player(request.form['playerName'], request.form['playerPassword'])
+            db.session.add(newPlayer)
+            db.session.commit()
     return redirect(url_for('index'))
 
 @mod.route('/login', methods=['GET', 'POST'])

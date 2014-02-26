@@ -44,7 +44,7 @@
 
     <div class="container">
 
-      <form class="form-inline" role="form">
+      <form class="form-inline" action="{{ url_for('result.saveResult')}}" role="form">
         <table class="table">
         	<caption class="h3">경기 결과 등록</caption>
         	<thead>
@@ -57,24 +57,27 @@
 	        		<td>내이름</td>
 	        		<td>vs</td>
 	        		<td>
+
 	        			<select class="form-contdol">
-	        				<option>장택순</option>
-	        				<option>이영남</option>
+                            {%  for name in playerList  %}
+	        				<option name="player2Name">{{ name }}</option>
+                            {% endfor %}
 	        			</select>
+
 	        		</td>
         		</tr>
         		<tr>
 	        		<td>
-	        			<input type="text" class="form-control" placeholder="나의 세트 스코어" /> 
+	        			<input name = "player1Set" type="text" class="form-control" placeholder="나의 세트 스코어" />
 	        		</td>
 	        		<td></td>
 	        		<td>
-	        			<input type="text" class="form-control" placeholder="상대 세트 스코어" />
+	        			<input name = "player2Set" type="text" class="form-control" placeholder="상대 세트 스코어" />
 	        		</td>
         		</tr>
         	</tbody>
         </table>
-        <input type="button" />
+        <input type="submit" />
       </form>
 
     </div> <!-- /container -->

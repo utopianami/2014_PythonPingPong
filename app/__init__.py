@@ -6,6 +6,10 @@ app.config.from_object('config')
 
 db = SQLAlchemy(app)
 
+@app.route('/')
+def index():
+    return render_template('main.html')
+
 from app.players.views import mod as playersModule
 from app.rank.views import mod as rankModule
 from app.result.views import mod as resultModule

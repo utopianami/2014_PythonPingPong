@@ -5,20 +5,25 @@ from app import db
 
 mod = Blueprint('result', __name__, url_prefix='/result')
 
+@mod.route('/')
+def result():
+    dbInPlayers = Player.query.all()
+    playerList = [players.playerName for players in dbInPlayers]
+    return render_template('result_register.html', playerList=playerList)
 
 @mod.route('/save', methods=['GET'])
 def saveResult():
-    player1Score = request.form['player1Score']
-    player2Score = request.form['player2Score']
+    player1Set = request.form['player1Set']
+    player2Set = request.form['player2Set']
 
-    player1 = Player.query.filter_by(userId = session['user_id']).first()
-    player2 = Player.query.filter_by(userName = request.form['player2Name']).first()
+    player1 = Player.query.filter_by(player_id = session['player_id']).first()
+    player2 = Player.query.filter_by(playerName = request.form['player2Name']).first()
 
-    if player1Score > player2Score:
-        result = Result(player1.getId(), player2.getId(), player1Score, player2Score)
+    if player1Set > player2Set:
+        result = Result(player1.getId(), player2.getId(), player1Set, player2Set)
         point = setRankPoint(player1, player2)
     else:
-        result = Result(player2.getId(), player1.getId(), player2Score, player1Score)
+        result = Result(player2.getId(), player1.getId(), player2Set, player1Set)
         point = setRankPoint(player2, player1)
 
     result.setPoint(point)
@@ -40,6 +45,5 @@ def checkRankPoint(playerGap):
     winnerPoint = rankPoint[playerGap][win]
     loserPoint = rankPoint[-playerGap][lose]
     point = [winnerPoint, loserPoint]
-
     return point
 

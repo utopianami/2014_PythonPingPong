@@ -1,4 +1,5 @@
 from app import db
+from app.result.models import Result
 
 class Player(db.Model):
     __tablename__ = 'playerTable'
@@ -8,10 +9,7 @@ class Player(db.Model):
     playerPassword = db.Column(db.String(80))
     soloRank = db.Column(db.Integer)
     teamRank = db.Column(db.Integer)
-    history = db.relationship('Result', backref='player', lazy='dynamic'
-                                                               ''
-                                                               ' '
-                                                               '')
+    #result = db.relationship('Result', backref='player', lazy='dynamic')
 
 
 
@@ -20,7 +18,7 @@ class Player(db.Model):
         self.playerPassword = password
 
     def __repr__(self):
-        return '<User %r>' % (self.userEmail)
+        return '<User %r>' % (self.playerName)
 
     def getId(self):
         return self.id

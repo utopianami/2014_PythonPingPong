@@ -4,11 +4,11 @@ class Result(db.Model):
     __tablename__ = 'resultTable'
 
 
-    id = db.Column(db.String(80), primary_key=True)
+    player_id = db.Column(db.String(80), primary_key=True)
     winner = db.Column(db.Integer)
     loser = db.Column(db.Integer)
-    #winner = db.Column(db.Integer, db.ForeignKey('userTable.id'))
-    #loser = db.Column(db.Integer, db.ForeignKey('userTable.id'))
+    winner = db.Column(db.Integer, db.ForeignKey('playerTable.id'))
+    loser = db.Column(db.Integer, db.ForeignKey('playerTable.id'))
     winPoint = db.Column(db.Integer)
     losePoint = db.Column(db.Integer)
     winnerGetSet = db.Column(db.Integer)
