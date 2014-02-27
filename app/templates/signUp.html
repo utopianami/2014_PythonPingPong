@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/custom/main.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
@@ -36,10 +37,11 @@
 
     <div class="container">
 
-      <form class="form-signin" method="POST" action="{{ url_for('players.register')}}">
+      <form class="form-signin" method="POST" action="{{ url_for('players.register')}}" onsubmit="return checkPwdValidation();">
         <h2 class="form-signin-heading" style="text-align: center;">선수 등록</h2>
             <input name="playerName" class="form-control" placeholder="사용자 이름" required="" autofocus="">
-            <input name="playerPassword" type="password" class="form-control" placeholder="비밀번호" required="">
+            <input id="playerPwd" name="playerPassword" type="password" class="form-control" placeholder="비밀번호" required="">
+            <input id="playerPwdRepeat" name="playerPasswordRepeat" type="password" class="form-control repeat" placeholder="비밀번호 확인" required="">
         <div style="text-align : center;"><span>본 서비스의 비밀번호는 암호화되지 않습니다.<br /> 평소 사용하는 비밀번호를 쓰지 마세요.<br /></span></div>
         <br />
         <button class="btn btn-lg btn-primary btn-block" type="submit">등록하기</button>
@@ -51,6 +53,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-  
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/docs.min.js"></script>
+    <script src="../static/js/custom.js"></script>
 
-</body></html>
+  </body>
+</html>

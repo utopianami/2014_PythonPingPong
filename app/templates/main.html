@@ -32,7 +32,7 @@
     {% include "./header.html" %}
 
     <div class="container-fluid">
-         <div id="player-register-btn" class="btn btn-block btn-warning btn-lg"><a href="/players/signUp">선수 등록</a></div>
+        <a href="/players/signUp"><div id="player-register-btn" class="btn btn-block btn-warning btn-lg">선수 등록</div></a>
 	     <div class="main">
 	       <h2 class="sub-header">순위표</h2>
 	       <div class="table-responsive">
@@ -48,30 +48,16 @@
 	             </tr>
 	           </thead>
 	           <tbody>
-	             <tr>
-	               <td>1</td>
-	               <td>Major</td>
-	               <td>이영남</td>
-	               <td>25</td>
-	               <td>10</td>
-	               <td>50</td>
-	             </tr>
-	             <tr>
-	               <td>2</td>
-	               <td>AAA</td>
-	               <td>장택순</td>
-	               <td>25</td>
-	               <td>1</td>
-	               <td>50</td>
-	             </tr>
-	             <tr>
-	               <td>3</td>
-	               <td></td>
-	               <td></td>
-	               <td></td>
-	               <td></td>
-	               <td>AA</td>
-	             </tr>
+               {%  for player in playerInfo  %}
+                 <tr>
+                    <td>{{ player.no }}</td>
+                    <td>{{ player.rank }}</td>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.win }}</td>
+                    <td>{{ player.lose }}</td>
+                    <td>{{ player.point }}</td>
+                 </tr>
+               {% endfor %}
 	           </tbody>
 	         </table>
 	       </div>
@@ -81,9 +67,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./main_files/jquery.min.js"></script>
-    <script src="./main_files/bootstrap.min.js"></script>
-    <script src="./main_files/docs.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/docs.min.js"></script>
+    <script src="../static/js/custom.js"></script>
   
 
 </body></html>

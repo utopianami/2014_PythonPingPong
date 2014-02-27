@@ -9,6 +9,14 @@ th, td {
     text-align: center;
 }
 
-.after_signin {
-    display : none;
+a, u {
+    text-decoration: none !important;
+}
+
+#playerPwd {
+    margin-top : 10px;
+}
+
+#loginFailText {
+    color : red;
 }

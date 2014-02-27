@@ -10,7 +10,11 @@
             <a class="navbar-brand" href="">탁구 기록실</a>
         </div>
         <div class="navbar-collapse collapse">
+            {% if not session %}
             <form class="navbar-form navbar-right before_signin" role="form">
+                {% if loginFail %}
+                <span id="loginFailText">로그인에 실패했습니다.</span>
+                {% endif %}
                 <div class="form-group">
                     <input type="text" placeholder="선수 이름" class="form-control">
                 </div>
@@ -19,11 +23,13 @@
                 </div>
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
+            {% elif %}
             <ul class="nav navbar-nav navbar-right after_signin">
                 <li><a href="/result">결과 등록</a></li>
                 <li><a href="">내 기록 확인</a></li>
                 <li><a href="">로그아웃</a></li>
             </ul>
+            {% endif %}
         </div>
     </div>
 </div>
