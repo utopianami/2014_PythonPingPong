@@ -1,4 +1,5 @@
-from flask import Blueprint, request, render_template, session, redirect, url_for, json
+from flask import Blueprint, request, render_template, session, redirect, url_for
+from flask.ext.login import logout_user
 from app import db
 from app.players.models import Player
 
@@ -29,6 +30,8 @@ def login():
         playerName = request.form['playerName']
         password = request.form['playerPassword']
         player = Player.query.filter_by(playerName = playerName).first()
+        print playerName
+        print password
 
         if player == None:
             return redirect(url_for('index', loginFail="True"))
@@ -38,3 +41,6 @@ def login():
 
     return redirect(url_for('index', loginFail="True"))
 
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
