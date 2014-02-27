@@ -8,16 +8,25 @@ mod = Blueprint('result', __name__, url_prefix='/result')
 @mod.route('/')
 def result():
     dbInPlayers = Player.query.all()
-    playerList = [dict(id = players.id, name = players.playerName) for players in dbInPlayers]
-    return render_template('result_register.html', playerList=playerList)
+    ############################
+    session['player_id'] = 1 #test
+    ############################
+
+    self = Player.query.filter_by(player_id = session['player_id']).first()
+    dbInPlayers.remove(self)
+    selfName = self.playerName
+
+    playerList = [dict(id = players.player_id, name = players.playerName) for players in dbInPlayers]
+
+    return render_template('result_register.html', name = selfName, playerList=playerList)
 
 @mod.route('/save', methods=['GET'])
 def saveResult():
-    print
-
     player1Set = request.args.get('player1Set')
     player2Set = request.args.get('player2Set')
+    ############################
     session['player_id'] = 1
+    ############################
 
     player1 = Player.query.filter_by(player_id = session['player_id']).first()
     player2 = Player.query.filter_by(player_id = request.args.get('player2_id')).first()
@@ -36,17 +45,20 @@ def saveResult():
     return "d"
 
 def setRankPoint(winner, loser):
-    playerGap = winner.getRank() - loser.getRank()
-    point = checkRankPoint(playerGap)
+    playerGap = winner.getSoloRank() - loser.getSoloRank()
+    point = checkRankPoint(playerGap, loser)
     return point
 
-def checkRankPoint(playerGap):
+def checkRankPoint(playerGap, loser):
     win = 0
     lose = 1
     rankPoint = {-3:[6, 0], -2:[5, 0], -1:[4, -1], 0:[3, -2],
                  1:[2, -3], 2:[1, -4], 3:[1, -5]}
     winnerPoint = rankPoint[playerGap][win]
     loserPoint = rankPoint[-playerGap][lose]
+
+    if loser.getSoloRank() == 1:
+        loserPoint = 0
     point = [winnerPoint, loserPoint]
     return point
 

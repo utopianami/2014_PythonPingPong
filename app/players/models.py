@@ -9,14 +9,11 @@ class Player(db.Model):
     playerPassword = db.Column(db.String(80))
     soloRank = db.Column(db.Integer)
     teamRank = db.Column(db.Integer)
-    winResult = db.relationship('Result', backref='winPlayer', lazy='dynamic')
-    loseResult = db.relationship('Result', backref='losePlayer', lazy='dynamic')
-
-
 
     def __init__(self, playerName, password):
         self.playerName = playerName
         self.playerPassword = password
+        self.soloRank = 1
 
     def __repr__(self):
         return '<User %r>' % (self.playerName)
@@ -28,6 +25,9 @@ class Player(db.Model):
         self.rank = rank
 
     def getSoloRank(self):
+        return self.soloRank
+
+    def getSoloRankName(self):
         rank = self.soloRank
         if rank is 4:
             return "major"
@@ -36,4 +36,4 @@ class Player(db.Model):
         if rank is 2:
             return "Double A"
         if rank is 1:
-            return "beginner"
+            return "Single A"
