@@ -10,25 +10,33 @@
             <a class="navbar-brand" href="">탁구 기록실</a>
         </div>
         <div class="navbar-collapse collapse">
-            {% if not session %}
-            <form class="navbar-form navbar-right before_signin" role="form">
-                {% if loginFail %}
-                <span id="loginFailText">로그인에 실패했습니다.</span>
-                {% endif %}
-                <div class="form-group">
-                    <input type="text" placeholder="선수 이름" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="비밀번호" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
-            {% else %}
+            {% if session %}
             <ul class="nav navbar-nav navbar-right after_signin">
                 <li><a href="/result">결과 등록</a></li>
                 <li><a href="/mypage">내 기록 확인</a></li>
                 <li><a href="/logout">로그아웃</a></li>
             </ul>
+            {% elif request.args.has_key('loginFail') %}
+            <form class="navbar-form navbar-right before_signin" role="form" action="{{ url_for('players.login')}}">
+                <span id="loginFailText">로그인에 실패하였습니다.</span>
+                <div class="form-group">
+                    <input name="playerName" type="text" placeholder="선수 이름" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input name="playerPassword" type="password" placeholder="비밀번호" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">로그인</button>
+            </form>
+            {% else %}
+            <form class="navbar-form navbar-right before_signin" role="form" action="{{ url_for('players.login')}}">
+                <div class="form-group">
+                    <input name="playerName" type="text" placeholder="선수 이름" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input name="playerPassword" type="password" placeholder="비밀번호" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">로그인</button>
+            </form>
             {% endif %}
         </div>
     </div>
