@@ -19,6 +19,8 @@ def register():
             newPlayer = Player(request.form['playerName'], request.form['playerPassword'])
             db.session.add(newPlayer)
             db.session.commit()
+
+    session['player_id'] = newPlayer.getId()
     return redirect(url_for('index'))
 
 @mod.route('/login', methods=['GET', 'POST'])
@@ -29,10 +31,10 @@ def login():
         player = Player.query.filter_by(playerName = playerName).first()
 
         if player == None:
-            return redirect(url_for('players.signUp', loginFail="True"))
+            return redirect(url_for('index', loginFail="True"))
         if player.playerName == password:
             session['player_id'] = player.getId()
             return redirect(url_for('index'))
 
-    return redirect(url_for('players.signUp', loginFail="True"))
+    return redirect(url_for('index', loginFail="True"))
 

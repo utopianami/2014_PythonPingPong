@@ -8,9 +8,6 @@ mod = Blueprint('result', __name__, url_prefix='/result')
 @mod.route('/')
 def result():
     dbInPlayers = Player.query.all()
-    ############################
-    session['player_id'] = 1 #test
-    ############################
 
     self = Player.query.filter_by(player_id = session['player_id']).first()
     dbInPlayers.remove(self)
@@ -24,9 +21,6 @@ def result():
 def saveResult():
     player1Set = request.args.get('player1Set')
     player2Set = request.args.get('player2Set')
-    ############################
-    session['player_id'] = 1
-    ############################
 
     player1 = Player.query.filter_by(player_id = session['player_id']).first()
     player2 = Player.query.filter_by(player_id = request.args.get('player2_id')).first()
@@ -42,7 +36,7 @@ def saveResult():
     db.session.add(result)
     db.session.commit()
 
-    return "d"
+    return redirect(url_for('index'))
 
 def setRankPoint(winner, loser):
     playerGap = winner.getSoloRank() - loser.getSoloRank()
