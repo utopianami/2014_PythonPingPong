@@ -21,9 +21,6 @@ class Player(db.Model):
     def getId(self):
         return self.player_id
 
-    def setSoloRank(self, rank):
-        self.rank = rank
-
     def getSoloRank(self):
         return self.soloRank
 
@@ -37,3 +34,14 @@ class Player(db.Model):
             return "Double A"
         if rank is 1:
             return "Single A"
+
+    def updateRank(self, point):
+        if point >= 50:
+            self.soloRank = 4
+        if point >= 35:
+            self.soloRank = 3
+        if point >= 20:
+            self.soloRank = 2
+        else :
+            self.soloRank = 1
+

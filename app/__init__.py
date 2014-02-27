@@ -10,10 +10,9 @@ db = SQLAlchemy(app)
 from checkRank import *
 @app.route('/')
 def index():
-    #jsonPlayers = getInfo()
-    #playerInfo = [dict(no = player.no , rank = player.rank, name = player.name, win = player.win, lose = player.lose, point = player.point) for player in jsonPlayers ]
-    #return render_template('main.html', playerInfo = playerInfo)
-    return render_template('main.html')
+    jsonPlayers = getInfo()
+    playerInfo = [dict(no = player.no , rank = player.rank, name = player.name, win = player.win, lose = player.lose, point = player.point) for player in jsonPlayers ]
+    return render_template('main.html', playerInfo = playerInfo)
 
 
 

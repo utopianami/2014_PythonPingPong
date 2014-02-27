@@ -25,4 +25,4 @@ class Result(db.Model):
 
     def setPoint(self, point):
         self.winPoint = point[0]
-        self.loserPoint = point[1]
+        self.losePoint = point[1]
