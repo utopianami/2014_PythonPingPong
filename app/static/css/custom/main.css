@@ -21,3 +21,15 @@ a, u {
     color : red;
     font-size : 1.3em;
 }
+
+input.set-score {
+    text-align: center;
+}
+
+#score-register-table {
+    margin : 0 auto;
+}
+
+#register-score {
+    width : 100%;
+}
