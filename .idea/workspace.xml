@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/models.py" afterPath="$PROJECT_DIR$/app/players/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/result/models.py" afterPath="$PROJECT_DIR$/app/result/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pingpong.py" afterPath="$PROJECT_DIR$/pingpong.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/result_register.html" afterPath="$PROJECT_DIR$/app/templates/result_register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo.md" afterPath="$PROJECT_DIR$/todo.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/result/views.py" afterPath="$PROJECT_DIR$/app/result/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tableTenis.iws" />
@@ -79,7 +74,7 @@
       <file leaf-file-name="schema.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/sql/schema.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1643" column="0" selection-start="66899" selection-end="66899" vertical-scroll-proportion="0.0" vertical-offset="24239" max-vertical-offset="50955">
+            <state line="1651" column="22" selection-start="67309" selection-end="67309" vertical-scroll-proportion="0.0" vertical-offset="24239" max-vertical-offset="50955">
               <folding />
             </state>
           </provider>
@@ -103,13 +98,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="todo.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="9" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.7688985" vertical-offset="319" max-vertical-offset="900">
+            <state line="47" column="20" selection-start="1200" selection-end="1200" vertical-scroll-proportion="-25.592592" vertical-offset="14" max-vertical-offset="915">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="322" selection-end="322" vertical-scroll-proportion="0.23595506" vertical-offset="0" max-vertical-offset="890">
               <folding />
             </state>
           </provider>
@@ -119,15 +123,6 @@
         <entry file="file:///Library/Python/2.7/site-packages/flask_sqlalchemy/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="847" column="0" selection-start="30989" selection-end="30989" vertical-scroll-proportion="0.0" vertical-offset="12190" max-vertical-offset="13065">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result_register.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/result_register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="31" selection-start="4691" selection-end="4691" vertical-scroll-proportion="-10.041667" vertical-offset="599" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
@@ -190,7 +185,6 @@
         <option value="$PROJECT_DIR$/app/result/__init__.py" />
         <option value="$PROJECT_DIR$/app/rank/models.py" />
         <option value="$PROJECT_DIR$/app/rank/views.py" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/users/models.py" />
         <option value="$PROJECT_DIR$/app/users/views.py" />
         <option value="$PROJECT_DIR$/app/Player/models.py" />
@@ -206,14 +200,15 @@
         <option value="$PROJECT_DIR$/app/result/views.py" />
         <option value="$PROJECT_DIR$/app/templates/result_register.html" />
         <option value="$PROJECT_DIR$/todo.md" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="49" />
     <option name="y" value="22" />
-    <option name="width" value="1231" />
-    <option name="height" value="778" />
+    <option name="width" value="934" />
+    <option name="height" value="1178" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -630,15 +625,19 @@
       <created>1393507641028</created>
       <updated>1393507641028</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="점수등록 서버쪽 완료">
+      <created>1393511517624</created>
+      <updated>1393511517624</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="6719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="22" width="1231" height="778" extended-state="6" />
-    <editor active="false" />
+    <frame x="49" y="22" width="934" height="1178" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -646,11 +645,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18846466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.248394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23695345" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15148783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -703,7 +702,8 @@
     <MESSAGE value="result_register.html&#10;you can receive select tag value at server-side." />
     <MESSAGE value="test" />
     <MESSAGE value="db생성 파일 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="db생성 파일 분리" />
+    <MESSAGE value="점수등록 서버쪽 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="점수등록 서버쪽 완료" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -893,30 +893,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/orm/relationships.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="829" column="0" selection-start="36239" selection-end="36239" vertical-scroll-proportion="0.0" vertical-offset="12022" max-vertical-offset="40005">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/orm/interfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="504" column="0" selection-start="16594" selection-end="16594" vertical-scroll-proportion="0.0" vertical-offset="7217" max-vertical-offset="8625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/sql/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1643" column="0" selection-start="66899" selection-end="66899" vertical-scroll-proportion="0.0" vertical-offset="24239" max-vertical-offset="50955">
           <folding />
         </state>
       </provider>
@@ -931,20 +910,6 @@
     <entry file="file:///Library/Python/2.7/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1460" column="0" selection-start="61615" selection-end="61615" vertical-scroll-proportion="0.0" vertical-offset="21287" max-vertical-offset="27345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="0" selection-start="5333" selection-end="5333" vertical-scroll-proportion="0.0" vertical-offset="1937" max-vertical-offset="2685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/engine/default.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="424" column="0" selection-start="14805" selection-end="14805" vertical-scroll-proportion="0.0" vertical-offset="6002" max-vertical-offset="14175">
           <folding />
         </state>
       </provider>
@@ -1058,14 +1023,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="0" selection-start="5333" selection-end="5333" vertical-scroll-proportion="0.0" vertical-offset="1937" max-vertical-offset="2685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/engine/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="424" column="0" selection-start="14805" selection-end="14805" vertical-scroll-proportion="0.0" vertical-offset="6002" max-vertical-offset="14175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/orm/interfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="504" column="0" selection-start="16594" selection-end="16594" vertical-scroll-proportion="0.0" vertical-offset="7217" max-vertical-offset="8625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/sql/schema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1651" column="22" selection-start="67309" selection-end="67309" vertical-scroll-proportion="0.0" vertical-offset="24239" max-vertical-offset="50955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/todo.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.7688985" vertical-offset="319" max-vertical-offset="900">
+        <state line="47" column="20" selection-start="1200" selection-end="1200" vertical-scroll-proportion="-25.592592" vertical-offset="14" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="322" selection-end="322" vertical-scroll-proportion="0.23595506" vertical-offset="0" max-vertical-offset="890">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

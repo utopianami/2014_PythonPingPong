@@ -10,6 +10,11 @@ db = SQLAlchemy(app)
 def index():
     return render_template('main.html')
 
+####test html
+#@app.route('/url')
+#def index():
+ #   return render_template('main.html')
+
 from app.players.views import mod as playersModule
 from app.rank.views import mod as rankModule
 from app.result.views import mod as resultModule
