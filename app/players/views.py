@@ -29,10 +29,10 @@ def login():
         player = Player.query.filter_by(playerName = playerName).first()
 
         if player == None:
-            return 'Wrong'
+            return redirect(url_for('players.signUp', loginFail="True"))
         if player.playerName == password:
             session['player_id'] = player.getId()
             return redirect(url_for('index'))
 
-    return 'Wrong'
+    return redirect(url_for('players.signUp', loginFail="True"))
 

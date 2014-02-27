@@ -1,3 +1,4 @@
+import datetime
 from app import db
 
 class Result(db.Model):
@@ -5,9 +6,10 @@ class Result(db.Model):
 
 
     result_id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.DateTime)
+
     winner = db.Column(db.Integer)
     loser = db.Column(db.Integer)
-
     winPoint = db.Column(db.Integer)
     losePoint = db.Column(db.Integer)
     winnerGetSet = db.Column(db.Integer)
@@ -19,6 +21,8 @@ class Result(db.Model):
         self.loser = loser
         self.winnerGetSet = winnerGetSet
         self.loserGetSet = loserGetSet
+        if self.date == None:
+            self.date = datetime.utcnow()
 
     def setPoint(self, point):
         self.winPoint = point[0]
