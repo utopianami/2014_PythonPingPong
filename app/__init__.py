@@ -11,7 +11,12 @@ from checkRank import *
 @app.route('/')
 def index():
     jsonPlayers = getInfo()
-    playerInfo = [dict(no = player.no , rank = player.rank, name = player.name, win = player.win, lose = player.lose, point = player.point) for player in jsonPlayers ]
+    startNum = 1
+    playerInfo = []
+    for player in jsonPlayers:
+        playerInfo.append(
+            dict(no=startNum, rank=player.rank, name=player.name, win=player.win, lose=player.lose, point=player.point))
+        startNum += 1
     return render_template('main.html', playerInfo = playerInfo)
 
 

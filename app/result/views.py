@@ -32,11 +32,6 @@ def saveResult():
         result = Result(player2.getId(), player1.getId(), player2Set, player1Set)
         point = setRankPoint(player2, player1)
 
-    # print result.winPoint
-    # print result.losePoint
-    # print result.winner
-    # print result.loser
-
     result.setPoint(point)
     db.session.add(result)
     db.session.commit()
