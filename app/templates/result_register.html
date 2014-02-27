@@ -58,9 +58,9 @@
 	        		<td>vs</td>
 	        		<td>
 
-	        			<select class="form-contdol">
+	        			<select name="player2Name" class="form-control">
                             {%  for name in playerList  %}
-	        				<option name="player2Name">{{ name }}</option>
+	        				<option value={{name}}>{{ name }}</option>
                             {% endfor %}
 	        			</select>
 
