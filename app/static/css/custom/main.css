@@ -8,3 +8,7 @@
 th, td {
     text-align: center;
 }
+
+.after_signin {
+    display : none;
+}
