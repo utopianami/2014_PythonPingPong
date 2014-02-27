@@ -8,16 +8,19 @@ mod = Blueprint('result', __name__, url_prefix='/result')
 @mod.route('/')
 def result():
     dbInPlayers = Player.query.all()
-    playerList = [players.playerName for players in dbInPlayers]
+    playerList = [dict(id = players.id, name = players.playerName) for players in dbInPlayers]
     return render_template('result_register.html', playerList=playerList)
 
 @mod.route('/save', methods=['GET'])
 def saveResult():
-    player1Set = request.form['player1Set']
-    player2Set = request.form['player2Set']
+    print
+
+    player1Set = request.args.get('player1Set')
+    player2Set = request.args.get('player2Set')
+    session['player_id'] = 1
 
     player1 = Player.query.filter_by(player_id = session['player_id']).first()
-    player2 = Player.query.filter_by(playerName = request.form['player2Name']).first()
+    player2 = Player.query.filter_by(player_id = request.args.get('player2_id')).first()
 
     if player1Set > player2Set:
         result = Result(player1.getId(), player2.getId(), player1Set, player2Set)
@@ -30,7 +33,7 @@ def saveResult():
     db.session.add(result)
     db.session.commit()
 
-    return None
+    return "d"
 
 def setRankPoint(winner, loser):
     playerGap = winner.getRank() - loser.getRank()

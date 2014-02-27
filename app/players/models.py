@@ -4,12 +4,13 @@ from app.result.models import Result
 class Player(db.Model):
     __tablename__ = 'playerTable'
 
-    id = db.Column(db.Integer, primary_key=True)
+    player_id = db.Column(db.Integer, primary_key=True)
     playerName = db.Column(db.String(80), unique=True)
     playerPassword = db.Column(db.String(80))
     soloRank = db.Column(db.Integer)
     teamRank = db.Column(db.Integer)
-    #result = db.relationship('Result', backref='player', lazy='dynamic')
+    winResult = db.relationship('Result', backref='winPlayer', lazy='dynamic')
+    loseResult = db.relationship('Result', backref='losePlayer', lazy='dynamic')
 
 
 
@@ -21,7 +22,7 @@ class Player(db.Model):
         return '<User %r>' % (self.playerName)
 
     def getId(self):
-        return self.id
+        return self.player_id
 
     def setSoloRank(self, rank):
         self.rank = rank

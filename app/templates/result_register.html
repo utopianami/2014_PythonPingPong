@@ -44,7 +44,7 @@
 
     <div class="container">
 
-      <form class="form-inline" action="{{ url_for('result.saveResult')}}" role="form">
+      <form class="form-inline" action="{{ url_for('result.saveResult')}}">
         <table class="table">
         	<caption class="h3">경기 결과 등록</caption>
         	<thead>
@@ -57,13 +57,11 @@
 	        		<td>내이름</td>
 	        		<td>vs</td>
 	        		<td>
-
-	        			<select name="player2Name" class="form-control">
-                            {%  for name in playerList  %}
-	        				<option value={{name}}>{{ name }}</option>
+	        			<select name="player2_id" class="form-control">
+                            {%  for player in playerList  %}
+	        				<option value={{player.id}}>{{ player.name }}</option>
                             {% endfor %}
 	        			</select>
-
 	        		</td>
         		</tr>
         		<tr>
