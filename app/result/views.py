@@ -35,6 +35,9 @@ def saveResult():
     result.setPoint(point)
     db.session.add(result)
     db.session.commit()
+    ##########################
+    #palyer1 and player 2 rank update code
+    ##########################
 
     return redirect(url_for('index'))
 
