@@ -57,33 +57,36 @@ def personal(id):
     winDict = getOpponentDict(dict, winTable, "win")
     totalDict = getOpponentDict(winDict, loseTable, "lose")
 
-    revenge = [None, 0]
-    pushOver = [None, 9999]
+    pushOver = [None, 0]
+    revenge = [None, 9999]
 
     count = 0
     for player in totalDict:
         curPoint = totalDict[player]["point"]
         if count == 0:
-            revenge[0] = player
-            revenge[1] = curPoint
             pushOver[0] = player
             pushOver[1] = curPoint
-            pass
-        if curPoint >= revenge[1]:
             revenge[0] = player
             revenge[1] = curPoint
+            pass
+        if curPoint >= pushOver[1]:
+            pushOver[0] = player
+            pushOver[1] = curPoint
         else:
-            if curPoint <= pushOver[1]:
-                pushOver[0] = player
-                pushOver[1] = curPoint
+            if curPoint <= revenge[1]:
+                revenge[0] = player
+                revenge[1] = curPoint
         count += 1
 
-    revengePlayer = Player.query.filter_by(player_id = revenge[0]).first()
-    pushOverPlayer = Player.query.filter_by(player_id = pushOver[0]).first()
+    personalPageInfo = {"name" :curPlayer.getPlayerName() , "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalRank" :curPlayer.getSoloRankName()}
+    if winTable.count() + loseTable.count() < 5:
+        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = None)
 
-    personalPageInfo = { "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalRank" :curPlayer.getSoloRankName()}
-    revengeInfo = { "player" : revengePlayer.getPlayerName(), "win" : totalDict[revenge[0]]["win"], "lose" : totalDict[revenge[0]]["lose"], "point" : revenge[1]}
-    pushOverInfo = {"player" :pushOverPlayer.getPlayerName(), "win" : totalDict[pushOver[0]]["win"], "lose" : totalDict[pushOver[0]]["lose"], "point" : totalDict[pushOver[0]]["offerPoint"]}
+
+    pushOverPlayer = Player.query.filter_by(player_id = pushOver[0]).first()
+    revengePlayer = Player.query.filter_by(player_id = revenge[0]).first()
+    pushOverInfo = { "player" : pushOverPlayer.getPlayerName(), "win" : totalDict[pushOver[0]]["win"], "lose" : totalDict[pushOver[0]]["lose"], "point" : pushOver[1]}
+    revengeInfo = {"player" :revengePlayer.getPlayerName(), "win" : totalDict[revenge[0]]["win"], "lose" : totalDict[revenge[0]]["lose"], "point" : totalDict[revenge[0]]["offerPoint"]}
 
     return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
 

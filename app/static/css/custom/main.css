@@ -33,3 +33,7 @@ input.set-score {
 #register-score {
     width : 100%;
 }
+
+.personal-opponent-info {
+    margin-bottom : 40px;
+}

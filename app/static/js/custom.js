@@ -2,11 +2,9 @@ window.addEventListener("load", function(e) {
 
     var idObj = {
         signUpValidation: "signup-form",
-        playerRegister: "player-register-btn"
-    };
-
-    var classObj = {
-        sendMatchInvitation: "send-match-invitation"
+        playerRegister: "player-register-btn",
+        sendMatchInvitationToPushover: "send-invitation-pushover",
+        sendMatchInvitationToRevenge: "send-invitation-revenge"
     };
 
     document.addEventListener("click", function(e) {
@@ -15,6 +13,10 @@ window.addEventListener("load", function(e) {
         switch (target.id) {
             case idObj.playerRegister:
                 window.location.href = "/players/signUp";
+                break;
+            case idObj.sendMatchInvitationToPushover:
+            case idObj.sendMatchInvitationToRevenge:
+                alert("아직 준비중입니다. 정식 릴리즈때 찾아뵙겠습니다.");
                 break;
         }
     }, false);
@@ -31,7 +33,7 @@ window.addEventListener("load", function(e) {
                 break;
         }
 
-        switch (target.class) {
+        switch (target.className) {
             case classObj.sendMatchInvitation:
                 alert("아직 준비중입니다. 정식 릴리즈때 찾아뵙겠습니다.");
                 break;

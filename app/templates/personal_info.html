@@ -50,19 +50,20 @@
         </div>
         {% else %}
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 personal-opponent-info">
                 <h2>나의 승점 자판기</h2>
-                <h3>{{ revengeInfo.player }}</h3>
-                <p>상대 전적 : {{ revengeInfo.win }}승 {{ revengeInfo.lose }}패</p>
-                <p>내가 획득한 승점 : {{ revengeInfo.point }}점</p>
-                <p><a class="btn btn-primary btn-lg send-match-invitation" role="button">맡겨둔 승리 찾으러 가기&raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>피해야 할 존재</h2>
                 <h3>{{ pushOverInfo.player }}</h3>
                 <p>상대 전적 : {{ pushOverInfo.win }}승 {{ pushOverInfo.lose }}패</p>
-                <p>내가 조공한 승점 : {{ pushOverInfo.point }}점</p>
-                <p><a class="btn btn-primary btn-lg" role="button">복수의 칼날 되돌려주기&raquo;</a></p>
+                <p>내가 획득한 승점 : {{ pushOverInfo.point }}점</p>
+                <p><a onclick="alert('준비중입니다. 다음 릴리즈때 찾아뵙겠습니다.');" id="send-invitation-pushover" class="btn btn-primary btn-lg send-match-invitation" role="button">맡겨둔 승리 찾으러 가기&raquo;</a></p>
+            </div>
+            <div class="col-md-4 personal-opponent-info">
+                <h2>피해야 할 존재</h2>
+                <h3>{{ revengeInfo.player }}</h3>
+                <p>상대 전적 : {{ revengeInfo.win }}승 {{ revengeInfo.lose }}패</p>
+                <p>내가 조공한 승점 : {{ revengeInfo.point }}점</p>
+                <p><a onclick="alert('준비중입니다. 다음 릴리즈때 찾아뵙겠습니다.');" id="send-invitation-revenge" class="btn btn-primary btn-lg" role="button">복수의 칼날 되돌려주기&raquo;</a></p>
+
             </div>
         </div>
         {% endif %}
