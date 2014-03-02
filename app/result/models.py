@@ -40,3 +40,6 @@ class Result(db.Model):
             return self.winPoint
         else:
             return self.losePoint
+
+    def offerPoint(self):
+        return self.winPoint

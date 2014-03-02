@@ -81,9 +81,9 @@ def personal(id):
     revengePlayer = Player.query.filter_by(player_id = revenge[0]).first()
     pushOverPlayer = Player.query.filter_by(player_id = pushOver[0]).first()
 
-    personalPageInfo = { "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalPoint" :curPlayer.getSoloRankName()}
+    personalPageInfo = { "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalRank" :curPlayer.getSoloRankName()}
     revengeInfo = { "player" : revengePlayer.getPlayerName(), "win" : totalDict[revenge[0]]["win"], "lose" : totalDict[revenge[0]]["lose"], "point" : revenge[1]}
-    pushOverInfo = {"player" :pushOverPlayer.getPlayerName(), "win" : totalDict[pushOver[0]]["win"], "lose" : totalDict[pushOver[0]]["lose"], "point" : pushOver[1]}
+    pushOverInfo = {"player" :pushOverPlayer.getPlayerName(), "win" : totalDict[pushOver[0]]["win"], "lose" : totalDict[pushOver[0]]["lose"], "point" : totalDict[pushOver[0]]["offerPoint"]}
 
     return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
 

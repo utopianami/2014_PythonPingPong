@@ -16,7 +16,6 @@ class AllPlayer():
 
 def filterPoint(player):
     return player.point
-
 def getInfo():
     players = Player.query.all()
     jsonPlayers = []
@@ -59,18 +58,24 @@ def getOpponentDict(dict, table, state):
     for result in table:
         id = result.getOpponent(state)
         point = result.getPoint(state)
+        offerPoint = result.offerPoint()
         if id in dict:
             dict[id]["point"] += point
             dict[id][state] += 1
+            if state == "lose":
+                dict[id]["offerPoint"] += offerPoint
+
         else:
             dict.update({id:{}})
             dict[id].update({"point" : point})
             if state == "win":
                 dict[id].update({"win" : 1})
                 dict[id].update({"lose" : 0})
+                dict[id].update({"offerPoint" : 0})
             else:
                 dict[id].update({"win" : 0})
                 dict[id].update({"lose" : 1})
+                dict[id].update({"offerPoint" : offerPoint})
 
 
 
