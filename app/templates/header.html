@@ -13,7 +13,7 @@
             {% if 'player_id' in session %}
             <ul class="nav navbar-nav navbar-right after_signin">
                 <li><a href="/result">결과 등록</a></li>
-                <li><a href="/mypage">내 기록 확인</a></li>
+                <li><a href="/players/{{ session.player_id }}">내 기록 확인</a></li>
                 <li><a href="{{ url_for('players.logout') }}">로그아웃</a></li>
             </ul>
             {% elif request.args.has_key('loginFail') %}

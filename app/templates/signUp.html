@@ -37,7 +37,7 @@
 
     <div class="container">
 
-      <form class="form-signin" method="POST" action="{{ url_for('players.register')}}" onsubmit="return checkPwdValidation();">
+      <form id="signup-form" class="form-signin" method="POST" action="{{ url_for('players.register')}}">
         <h2 class="form-signin-heading" style="text-align: center;">선수 등록</h2>
             <input name="playerName" class="form-control" placeholder="사용자 이름" required="" autofocus="">
             <input id="playerPwd" name="playerPassword" type="password" class="form-control" placeholder="비밀번호" required="">

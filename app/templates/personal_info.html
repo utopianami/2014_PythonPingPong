@@ -31,10 +31,16 @@
 <body style="">
 {% include "./header.html" %}
 <div>
+    {{ personalPageInfo }}
+    {{ revengeInfo }}
+    {{ pushOverInfo }}
     <div class="jumbotron">
         <div class="container">
-            <h1>개인 기록실</h1>
-            <p>상대 전적에 관한 다양한 정보들을 제공합니다. <br />꼼꼼하게 확인해서 적합한 상대를 찾아 대전을 신청하세요!</p>
+            <h1>개인 기록</h1>
+            <h2>통산 전적</h2>
+            <p>3승 2패</p>
+            <h2>통산 승점</h2>
+            <p>45점</p>
 
         </div>
     </div>
@@ -46,12 +52,14 @@
                 <h2>가장 상대하기 편한 선수</h2>
                 <h3>이영남</h3>
                 <p>이영남과의 상대 전적 : 3승 2패</p>
+                <p>이영남에게 획득한 승점 : </p>
                 <p><a class="btn btn-primary btn-lg" role="button">맡겨둔 승리 찾으러 가기&raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>가장 상대하기 까다로운 선수</h2>
                 <h3>이영남</h3>
                 <p>이영남과의 상대 전적 : 3승 2패</p>
+                <p>이영남에게 빼앗긴 승점</p>
                 <p><a class="btn btn-primary btn-lg" role="button">복수의 칼날 되돌려주기&raquo;</a></p>
             </div>
         </div>

@@ -33,7 +33,7 @@
 
     <div class="container-fluid">
         {% if not 'player_id' in session %}
-        <a href="/players/signUp"><div id="player-register-btn" class="btn btn-block btn-warning btn-lg">선수 등록</div></a>
+        <div id="player-register-btn" class="btn btn-warning btn-lg">선수 등록</div>
         {% endif %}
 	     <div class="main">
 	       <h2 class="sub-header">순위표</h2>
@@ -50,11 +50,14 @@
 	             </tr>
 	           </thead>
 	           <tbody>
+               {% if not playerInfo %}
+               <td colspan="6">등록된 선수가 없습니다.</td>
+               {% endif %}
                {%  for player in playerInfo  %}
                  <tr>
                     <td>{{ player.no }}</td>
                     <td>{{ player.rank }}</td>
-                    <td>{{ player.name }}</td>
+                    <a href="/players/{{ player.id }}"><td>{{ player.name }}</td></a>
                     <td>{{ player.win }}</td>
                     <td>{{ player.lose }}</td>
                     <td>{{ player.point }}</td>

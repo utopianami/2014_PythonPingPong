@@ -1,3 +1,34 @@
+window.addEventListener("load", function(e) {
+
+    var idObj = {
+        signUpValidation: "signup-form",
+        playerRegister: "player-register-btn"
+    }
+
+    document.addEventListener("click", function(e) {
+        var target = e.target;
+
+        switch (target.id) {
+            case idObj.playerRegister:
+                window.location.href = "/players/signUp";
+                break;
+        }
+    }, false);
+
+    document.addEventListener("submit", function(e) {
+        var target = e.target;
+
+        switch (target.id) {
+            case idObj.signUpValidation:
+                e.preventDefault();
+                if(checkPwdValidation() === true) {
+                    target.submit();
+                };
+                break;
+        }
+    }, false);
+}, false);
+
 function checkPwdValidation() {
 
     var playerPwd = document.getElementById("playerPwd").value;
@@ -10,3 +41,4 @@ function checkPwdValidation() {
         return false;
     }
 }
+
