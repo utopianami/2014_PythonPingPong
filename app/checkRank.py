@@ -65,7 +65,6 @@ def getOpponentDict(dict, table, state):
         else:
             dict.update({id:{}})
             dict[id].update({"point" : 0})
-            #윈 루즈 스테이트 확인
             dict[id].update({"win" : 1})
             dict[id].update({"lose" : 1})
 
