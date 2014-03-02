@@ -3,7 +3,7 @@ from flask.ext.login import LoginManager, logout_user, login_required
 from app import db, app
 from app.players.models import Player
 from app.result.models import Result
-from checkRank import *
+from app.checkRank import *
 
 mod = Blueprint('players', __name__, url_prefix='/players')
 login_manager = LoginManager()
@@ -32,9 +32,6 @@ def login():
         playerName = request.form['playerName']
         password = request.form['playerPassword']
         player = Player.query.filter_by(playerName = playerName).first()
-        print playerName
-        print password
-        print player.playerName
 
         if player == None:
             return redirect(url_for('index', loginFail="True"))
@@ -54,14 +51,14 @@ def logout():
 def personal(id):
     winTable = Result.query.filter_by(winner = id)
     loseTable = Result.query.filter_by(loser = id)
-    player = Player.query.filter_by(player_id = id)
+    curPlayer = Player.query.filter_by(player_id = id).first()
 
     dict = {}
     winDict = getOpponentDict(dict, winTable, "win")
     totalDict = getOpponentDict(winDict, loseTable, "lose")
 
     revenge = [None, 0]
-    pushOver = [None, 0]
+    pushOver = [None, 9999]
 
     for player in totalDict:
         curPoint = totalDict[player]["point"]
@@ -73,9 +70,13 @@ def personal(id):
                 pushOver[0] = player
                 pushOver[1] = curPoint
 
-    personalPageInfo = dict(totalWin = winTable.count(), totalLose = loseTable.count, rank = player.getSoloRankName())
-    revengeInfo = dict(player = revenge[0], win = totalDict[revenge[0]]["win"], lose = totalDict[revenge[0]]["lose"], point = revenge[1])
-    pushOverInfo = dict(player = pushOver[0], win = totalDict[pushOver[0]]["win"], lose = totalDict[pushOver[0]]["lose"], point = pushOver[1])
+    revengePlayer = Player.query.filter_by(player_id = revenge[0]).first()
+    pushOverPlayer = Player.query.filter_by(player_id = pushOver[0]).first()
+
+    personalPageInfo = { "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalPoint" :curPlayer.getSoloRankName()}
+    revengeInfo = { "player" : revengePlayer.getPlayerName(), "win" : totalDict[revenge[0]]["win"], "lose" : totalDict[revenge[0]]["lose"], "point" : revenge[1]}
+    pushOverInfo = {"player" :pushOverPlayer.getPlayerName(), "win" : totalDict[pushOver[0]]["win"], "lose" : totalDict[pushOver[0]]["lose"], "point" : pushOver[1]}
 
     return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
+
 

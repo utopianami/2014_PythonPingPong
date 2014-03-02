@@ -37,7 +37,6 @@ def getInfo():
 
 def getWinGame(playerId):
     winResult = Result.query.filter_by(winner = playerId)
-    print winResult
     winGames = winResult.count()
     winPoint = 0
     for result in winResult:
@@ -46,7 +45,6 @@ def getWinGame(playerId):
 
 def getLoseGame(playerId):
     loseResult = Result.query.filter_by(loser = playerId)
-    print loseResult
     loseGames = loseResult.count()
     losePoint = 0
     for result in loseResult:

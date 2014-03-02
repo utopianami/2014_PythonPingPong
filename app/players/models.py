@@ -24,6 +24,9 @@ class Player(db.Model):
     def getSoloRank(self):
         return self.soloRank
 
+    def getPlayerName(self):
+        return self.playerName
+
     def getSoloRankName(self):
         rank = self.soloRank
         if rank is 4:
