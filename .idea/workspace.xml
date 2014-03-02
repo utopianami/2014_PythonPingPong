@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="separate html and javascript&#10;personal page test&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pingpong.py" afterPath="$PROJECT_DIR$/pingpong.py" />
+    <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tableTenis.iws" />
@@ -887,7 +885,7 @@
       <created>1393346234541</created>
       <updated>1393346234541</updated>
       <workItem from="1393471692786" duration="6719000" />
-      <workItem from="1393764280728" duration="4514000" />
+      <workItem from="1393764280728" duration="4536000" />
     </task>
     <task id="LOCAL-00001" summary="result_register.html&#10;you can receive select tag value at server-side.">
       <created>1393480854256</created>
@@ -925,11 +923,15 @@
       <created>1393768688721</created>
       <updated>1393768688721</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="separate html and javascript&#10;personal page test&#10;">
+      <created>1393768815501</created>
+      <updated>1393768815502</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11233000" />
+    <option name="totallyTimeSpent" value="11255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="22" width="960" height="1174" extended-state="0" />
