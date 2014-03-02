@@ -6,6 +6,7 @@ from operator import itemgetter
 
 class AllPlayer():
     def __init__(self, name ):
+        self.player_id = None
         self.no = None
         self.rank = None
         self.name = name
@@ -25,6 +26,7 @@ def getInfo():
         win= getWinGame(player.player_id)
         lose = getLoseGame(player.player_id)
 
+        tmpPlayer.player_id = player.player_id
         tmpPlayer.rank = player.getSoloRankName()
         tmpPlayer.win = win[0]
         tmpPlayer.lose= lose[0]
@@ -63,8 +65,9 @@ def getOpponentDict(dict, table, state):
         else:
             dict.update({id:{}})
             dict[id].update({"point" : 0})
-            dict[id].update({"win" : 0})
-            dict[id].update({"lose" : 0})
+            #윈 루즈 스테이트 확인
+            dict[id].update({"win" : 1})
+            dict[id].update({"lose" : 1})
 
     return dict
 
