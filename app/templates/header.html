@@ -17,7 +17,7 @@
                 <li><a href="{{ url_for('players.logout') }}">로그아웃</a></li>
             </ul>
             {% elif request.args.has_key('loginFail') %}
-            <form method="post" class="navbar-form navbar-right before_signin" role="form" action="{{ url_for('players.login')}}">
+            <form id="login" method="post" class="navbar-form navbar-right before_signin" role="form" action="{{ url_for('players.login')}}">
                 <span id="loginFailText">로그인에 실패하였습니다.</span>
                 <div class="form-group">
                     <input name="playerName" type="text" placeholder="선수 이름" class="form-control">

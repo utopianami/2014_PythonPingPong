@@ -33,7 +33,7 @@
 <div>
     <div class="jumbotron">
         <div class="container">
-            <h1>개인 기록</h1>
+            <h1>{{ personalPageInfo.name }}의 기록실</h1>
             <h2>통산 전적</h2>
             <p>{{ personalPageInfo.totalWin }}승 {{ personalPageInfo.totalLose }}패</p>
             <h2>나의 현재 랭크</h2>
@@ -44,22 +44,28 @@
 
     <div class="container">
         <!-- Example row of columns -->
+        {% if not revengeInfo %}
+        <div class="row">
+            <h1>세부 상대 전적은 <strong>5 경기</strong> 이후부터 표시됩니다. <small>분발해라 뉴비야 :P</small></h1>
+        </div>
+        {% else %}
         <div class="row">
             <div class="col-md-4">
-                <h2>가장 상대하기 편한 선수</h2>
+                <h2>나의 승점 자판기</h2>
                 <h3>{{ revengeInfo.player }}</h3>
-                <p>{{ revengeInfo.player }}과의 상대 전적 : {{ revengeInfo.win }}승 {{ revengeInfo.lose }}패</p>
-                <p>{{ revengeInfo.player }}에게 획득한 승점 : {{ revengeInfo.point }}점</p>
-                <p><a class="btn btn-primary btn-lg" role="button">맡겨둔 승리 찾으러 가기&raquo;</a></p>
+                <p>상대 전적 : {{ revengeInfo.win }}승 {{ revengeInfo.lose }}패</p>
+                <p>내가 획득한 승점 : {{ revengeInfo.point }}점</p>
+                <p><a class="btn btn-primary btn-lg send-match-invitation" role="button">맡겨둔 승리 찾으러 가기&raquo;</a></p>
             </div>
             <div class="col-md-4">
-                <h2>가장 상대하기 까다로운 선수</h2>
+                <h2>피해야 할 존재</h2>
                 <h3>{{ pushOverInfo.player }}</h3>
-                <p>{{ pushOverInfo.player }}과의 상대 전적 : {{ pushOverInfo.win }}승 {{ pushOverInfo.lose }}패</p>
-                <p>{{ pushOverInfo.player }}에게 조공한 승점 : {{ pushOverInfo.point }}점</p>
+                <p>상대 전적 : {{ pushOverInfo.win }}승 {{ pushOverInfo.lose }}패</p>
+                <p>내가 조공한 승점 : {{ pushOverInfo.point }}점</p>
                 <p><a class="btn btn-primary btn-lg" role="button">복수의 칼날 되돌려주기&raquo;</a></p>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
 
