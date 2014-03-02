@@ -15,7 +15,7 @@ def index():
     playerInfo = []
     for player in jsonPlayers:
         playerInfo.append(
-            dict(no=startNum, rank=player.rank, name=player.name, win=player.win, lose=player.lose, point=player.point))
+            dict(id =player.player_id, no=startNum, rank=player.rank, name=player.name, win=player.win, lose=player.lose, point=player.point))
         startNum += 1
     return render_template('main.html', playerInfo = playerInfo)
 

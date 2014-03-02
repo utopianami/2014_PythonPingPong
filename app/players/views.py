@@ -60,15 +60,23 @@ def personal(id):
     revenge = [None, 0]
     pushOver = [None, 9999]
 
+    count = 0
     for player in totalDict:
         curPoint = totalDict[player]["point"]
-        if curPoint > revenge[1]:
+        if count == 0:
+            revenge[0] = player
+            revenge[1] = curPoint
+            pushOver[0] = player
+            pushOver[1] = curPoint
+            pass
+        if curPoint >= revenge[1]:
             revenge[0] = player
             revenge[1] = curPoint
         else:
-            if curPoint < pushOver[1]:
+            if curPoint <= pushOver[1]:
                 pushOver[0] = player
                 pushOver[1] = curPoint
+        count += 1
 
     revengePlayer = Player.query.filter_by(player_id = revenge[0]).first()
     pushOverPlayer = Player.query.filter_by(player_id = pushOver[0]).first()
