@@ -64,9 +64,15 @@ def getOpponentDict(dict, table, state):
             dict[id][state] += 1
         else:
             dict.update({id:{}})
-            dict[id].update({"point" : 0})
-            dict[id].update({"win" : 1})
-            dict[id].update({"lose" : 1})
+            dict[id].update({"point" : point})
+            if state == "win":
+                dict[id].update({"win" : 1})
+                dict[id].update({"lose" : 0})
+            else:
+                dict[id].update({"win" : 0})
+                dict[id].update({"lose" : 1})
+
+
 
     return dict
 
