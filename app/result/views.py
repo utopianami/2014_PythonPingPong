@@ -60,4 +60,3 @@ def checkRankPoint(playerGap, loser):
     point = [winnerPoint, loserPoint]
 
     return point
-
