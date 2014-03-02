@@ -2,6 +2,8 @@ from flask import Blueprint, request, render_template, session, redirect, url_fo
 from flask.ext.login import LoginManager, logout_user, login_required
 from app import db, app
 from app.players.models import Player
+from app.result.models import Result
+from checkRank import *
 
 mod = Blueprint('players', __name__, url_prefix='/players')
 login_manager = LoginManager()
@@ -46,3 +48,34 @@ def login():
 def logout():
     session.pop('player_id', None)
     return redirect(url_for('index'))
+
+
+@mod.route('/<id>')
+def personal(id):
+    winTable = Result.query.filter_by(winner = id)
+    loseTable = Result.query.filter_by(loser = id)
+    player = Player.query.filter_by(player_id = id)
+
+    dict = {}
+    winDict = getOpponentDict(dict, winTable, "win")
+    totalDict = getOpponentDict(winDict, loseTable, "lose")
+
+    revenge = [None, 0]
+    pushOver = [None, 0]
+
+    for player in totalDict:
+        curPoint = totalDict[player]["point"]
+        if curPoint > revenge[1]:
+            revenge[0] = player
+            revenge[1] = curPoint
+        else:
+            if curPoint < pushOver[1]:
+                pushOver[0] = player
+                pushOver[1] = curPoint
+
+    personalPageInfo = dict(totalWin = winTable.count(), totalLose = loseTable.count, rank = player.getSoloRankName())
+    revengeInfo = dict(player = revenge[0], win = totalDict[revenge[0]]["win"], lose = totalDict[revenge[0]]["lose"], point = revenge[1])
+    pushOverInfo = dict(player = pushOver[0], win = totalDict[pushOver[0]]["win"], lose = totalDict[pushOver[0]]["lose"], point = pushOver[1])
+
+    return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
+

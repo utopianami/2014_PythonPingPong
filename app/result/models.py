@@ -26,3 +26,17 @@ class Result(db.Model):
     def setPoint(self, point):
         self.winPoint = point[0]
         self.losePoint = point[1]
+
+
+
+    def getOpponent(self, state):
+        if state == "lose":
+            return self.winner
+        else:
+            return self.loser
+
+    def getPoint(self, state):
+        if state == "win":
+            return self.winPoint
+        else:
+            return self.losePoint

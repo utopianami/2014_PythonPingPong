@@ -53,3 +53,20 @@ def getLoseGame(playerId):
         losePoint += result.losePoint
     return [loseGames, losePoint]
 
+
+def getOpponentDict(dict, table, state):
+
+    for result in table:
+        id = result.getOpponent(state)
+        point = result.getPoint(state)
+        if id in dict:
+            dict[id]["point"] += point
+            dict[id][state] += 1
+        else:
+            dict.update({id:{}})
+            dict[id].update({"point" : 0})
+            dict[id].update({"win" : 0})
+            dict[id].update({"lose" : 0})
+
+    return dict
+
