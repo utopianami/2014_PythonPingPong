@@ -63,19 +63,16 @@ def personal(id):
     count = 0
     for player in totalDict:
         curPoint = totalDict[player]["point"]
+        offerPoint = totalDict[player]["offerPoint"]
         if count == 0:
             pushOver[0] = player
             pushOver[1] = curPoint
             revenge[0] = player
-            revenge[1] = curPoint
+            revenge[1] = offerPoint
             pass
-        if curPoint >= pushOver[1]:
+        if offerPoint >= pushOver[1]:
             pushOver[0] = player
-            pushOver[1] = curPoint
-        else:
-            if curPoint <= revenge[1]:
-                revenge[0] = player
-                revenge[1] = curPoint
+            pushOver[1] = offerPoint
         count += 1
 
     personalPageInfo = {"name" :curPlayer.getPlayerName() , "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalRank" :curPlayer.getSoloRankName()}
