@@ -67,11 +67,14 @@
         		</tr>
         		<tr>
 	        		<td>
-	        			<input name = "player1Set" type="text" class="form-control set-score" placeholder="나의 세트 스코어" />
+	        			<select id="game-result" name="gameResult" class="form-control">
+                            <option value="win" selected="selected">승리</option>
+                            <option value="lose">패배</option>
+	        			</select>
 	        		</td>
 	        		<td></td>
 	        		<td>
-	        			<input name = "player2Set" type="text" class="form-control set-score" placeholder="상대 세트 스코어" />
+	        			<span id="opponent-result">패배</span>
 	        		</td>
         		</tr>
                 <tr>

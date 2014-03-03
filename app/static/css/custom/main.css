@@ -14,8 +14,13 @@ a, u {
     text-decoration: none !important;
 }
 
-#playerPwd {
-    margin-top : 10px;
+#signup-warning-text {
+    color : red;
+    display : none;
+}
+
+.signup-field {
+    margin-bottom : 10px;
 }
 
 #loginFailText {

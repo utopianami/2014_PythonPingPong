@@ -39,10 +39,11 @@
 
       <form id="signup-form" class="form-signin" method="POST" action="{{ url_for('players.register')}}">
         <h2 class="form-signin-heading" style="text-align: center;">선수 등록</h2>
-            <input name="playerName" class="form-control" placeholder="사용자 이름" required="" autofocus="">
-            <input id="playerPwd" name="playerPassword" type="password" class="form-control" placeholder="비밀번호" required="">
-            <input id="playerPwdRepeat" name="playerPasswordRepeat" type="password" class="form-control repeat" placeholder="비밀번호 확인" required="">
-        <div style="text-align : center;"><span>본 서비스의 비밀번호는 암호화되지 않습니다.<br /> 평소 사용하는 비밀번호를 쓰지 마세요.<br /></span></div>
+            <input id="studentNo" name="studentNo" class="form-control signup-field" placeholder="사용자 학번" required="" autofocus="">
+            <input id="playerName" name="playerName" class="form-control signup-field" placeholder="사용자 이름" required="">
+            <input id="playerPwd" name="playerPassword" type="password" class="form-control signup-field" placeholder="비밀번호" required="">
+            <input id="playerPwdRepeat" name="playerPasswordRepeat" type="password" class="form-control repeat signup-field" placeholder="비밀번호 확인" required="">
+        <div style="text-align: center;"><span id="signup-warning-text">학번 혹은 이름이 유효하지 않습니다.</span><br /><span>본 서비스의 비밀번호는 암호화되지 않습니다.<br /> 평소 사용하는 비밀번호를 쓰지 마세요.<br /></span></div>
         <br />
         <button class="btn btn-lg btn-primary btn-block" type="submit">등록하기</button>
       </form>
