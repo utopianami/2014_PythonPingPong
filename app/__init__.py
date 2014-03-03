@@ -22,9 +22,7 @@ def index():
 
 
 from app.players.views import mod as playersModule
-from app.rank.views import mod as rankModule
 from app.result.views import mod as resultModule
 
-app.register_blueprint(rankModule)
 app.register_blueprint(resultModule)
 app.register_blueprint(playersModule)
