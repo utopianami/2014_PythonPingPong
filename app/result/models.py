@@ -12,11 +12,13 @@ class Result(db.Model):
     loser = db.Column(db.Integer)
     winPoint = db.Column(db.Integer)
     losePoint = db.Column(db.Integer)
+    isVerified = db.Column(db.Integer)
 
     def __init__(self, winner, loser):
         self.winner = winner
         self.loser = loser
         self.resultDate = datetime.now()
+        self.isVerified = 0
 
     def setPoint(self, point):
         self.winPoint = point[0]
@@ -36,3 +38,6 @@ class Result(db.Model):
 
     def offerPoint(self):
         return self.winPoint
+
+    def setVerified(self):
+        self.isVerified = 1
