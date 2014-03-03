@@ -4,6 +4,7 @@ from app import db, app
 from app.players.models import Player
 from app.result.models import Result
 from app.checkRank import *
+from app.players.studentList import studentList
 
 mod = Blueprint('players', __name__, url_prefix='/players')
 login_manager = LoginManager()
@@ -15,14 +16,18 @@ def signUp():
 
 @mod.route('/register', methods=["POST"])
 def register():
-    if request.method == "POST":
-        isExist = Player.query.filter_by(playerName = request.form['playerName']).first()
-        if isExist is not None:
-            return 'exist'
-        else:
-            newPlayer = Player(request.form['playerName'], request.form['playerPassword'])
-            db.session.add(newPlayer)
-            db.session.commit()
+    #checknextList
+    requestName = request.form['playerName']
+    if requestName not in studentList & request.form['studentNo'] != studentList[requestName]:
+        return "SIGNUP_INVALID"
+
+    isExist = Player.query.filter_by(playerName = requestName).first()
+    if isExist is not None:
+        return "SIGNUP_INVALID"
+    else:
+        newPlayer = Player(requestName, request.form['playerPassword'])
+        db.session.add(newPlayer)
+        db.session.commit()
     session['player_id'] = newPlayer.getId()
     return redirect(url_for('index'))
 
