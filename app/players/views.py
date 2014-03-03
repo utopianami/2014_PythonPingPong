@@ -19,17 +19,19 @@ def register():
     #checknextList
     requestName = request.form['playerName']
     if requestName not in studentList & request.form['studentNo'] != studentList[requestName]:
-        return "SIGNUP_INVALID"
+        return "INVALID_SIGNUP_DATA"
 
     isExist = Player.query.filter_by(playerName = requestName).first()
     if isExist is not None:
-        return "SIGNUP_INVALID"
+        return "INVALID_SIGNUP_DATA"
     else:
         newPlayer = Player(requestName, request.form['playerPassword'])
         db.session.add(newPlayer)
         db.session.commit()
     session['player_id'] = newPlayer.getId()
-    return redirect(url_for('index'))
+    return "SIGNUP_SUCCESS"
+
+
 
 @mod.route('/login', methods=['GET', 'POST'])
 def login():

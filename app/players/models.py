@@ -9,11 +9,13 @@ class Player(db.Model):
     playerPassword = db.Column(db.String(80))
     soloRank = db.Column(db.Integer)
     teamRank = db.Column(db.Integer)
+    minusMaginot = db.Column(db.Integer)
 
     def __init__(self, playerName, password):
         self.playerName = playerName
         self.playerPassword = password
         self.soloRank = 1
+        self.minusMaginot = 0
 
     def __repr__(self):
         return '<User %r>' % (self.playerName)
@@ -41,10 +43,12 @@ class Player(db.Model):
     def updateRank(self, point):
         if point >= 50:
             self.soloRank = 4
-        if point >= 35:
+        if point >= 30:
             self.soloRank = 3
-        if point >= 20:
+        if point >= 15:
             self.soloRank = 2
         else :
             self.soloRank = 1
+            if point < -10:
+                self.minusMaginot = 1
 

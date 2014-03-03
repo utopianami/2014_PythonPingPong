@@ -54,7 +54,7 @@ def checkRankPoint(playerGap, loser):
     winnerPoint = rankPoint[playerGap][0]
     loserPoint = rankPoint[-playerGap][1]
 
-    if loser.getSoloRank() == 1:
+    if loser.minusMaginot == 1:
         loserPoint = 0
     point = [winnerPoint, loserPoint]
 
