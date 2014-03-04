@@ -39,17 +39,6 @@ window.addEventListener("load", function(e) {
         }
     }, false);
 
-    document.addEventListener("change", function(e) {
-        var target = e.target;
-
-        switch (target.id) {
-            case idObj.gameResult:
-                changeOpponentResult(target);
-                break;
-        }
-
-    }, false);
-
 }, false);
 
 function checkPwdValidation() {
@@ -96,13 +85,13 @@ function checkPwdValidation() {
     xhr.send(formData);
 }
 
-function changeOpponentResult(target) {
+function changeOpponentResult() {
 
     var opponentResult = document.getElementById("opponent-result");
 
-    if (target.value === "win") {
-        opponentResult.value = "패배";
+    if (document.querySelector(idObj.gameResult).value === "win") {
+        opponentResult.innerHTML = "패배";
     } else {
-        opponentResult.value = "승리";
+        opponentResult.innerHTML = "승리";
     }
 }

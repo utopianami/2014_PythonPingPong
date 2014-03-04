@@ -40,7 +40,20 @@
    		text-align : center;
    }
    
-  </style></head>
+  </style>
+  <script>
+      function changeOpponentResult() {
+
+          var opponentResult = document.getElementById("opponent-result");
+
+          if (document.querySelector("#game-result").value === "win") {
+              opponentResult.innerHTML = "패배";
+          } else {
+              opponentResult.innerHTML = "승리";
+          }
+      }
+  </script>
+  </head>
   <body>
 
     <div class="container">
@@ -67,7 +80,7 @@
         		</tr>
         		<tr>
 	        		<td>
-	        			<select id="game-result" name="gameResult" class="form-control">
+	        			<select id="game-result" name="gameResult" class="form-control" onchange="javascript:changeOpponentResult();">
                             <option value="win" selected="selected">승리</option>
                             <option value="lose">패배</option>
 	        			</select>
