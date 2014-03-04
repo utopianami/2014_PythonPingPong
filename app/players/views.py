@@ -18,24 +18,23 @@ def signUp():
 
 @mod.route('/register', methods=["POST"])
 def register():
-    #checknextList
+    #checkstudentList
     requestName = request.form['playerName']
-    studnetNo = request.form['studentNo']
+    studnetNo = int(request.form['studentNo'])
+    requestNameUTF = requestName.encode('utf-8')
 
-    if requestName not in studentList or studnetNo != studentList[requestName]:
+
+    if requestNameUTF not in studentList or studnetNo != studentList[requestNameUTF]:
         return "INVALID_SIGNUP_DATA"
 
-
-    isExist = Player.query.filter_by(requestName = "이영남").first()
-    print isExist
+    isExist = Player.query.filter_by(playerName = requestName).first()
     if isExist is not None:
         return "INVALID_SIGNUP_DATA"
     else:
-        pass
-        #newPlayer = Player(requestName, getDict['playerPassword'])
-        #db.session.add(newPlayer)
-        #db.session.commit()
-    #session['player_id'] = newPlayer.getId()
+        newPlayer = Player(requestName, request.form['playerPassword'])
+        db.session.add(newPlayer)
+        db.session.commit()
+    session['player_id'] = newPlayer.getId()
     return "SIGNUP_SUCCESS"
 
 

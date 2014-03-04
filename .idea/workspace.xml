@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/custom.js" afterPath="$PROJECT_DIR$/app/static/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/views.py" afterPath="$PROJECT_DIR$/app/players/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -15,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PingPong$pingpong.coverage" NAME="pingpong Coverage Results" MODIFIED="1393908401637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PingPong$pingpong.coverage" NAME="pingpong Coverage Results" MODIFIED="1393909621308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tableTenis$tableTenis.coverage" NAME="tableTenis Coverage Results" MODIFIED="1393416637996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -88,13 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/players/views.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="31" selection-start="866" selection-end="866" vertical-scroll-proportion="0.39423078" vertical-offset="215" max-vertical-offset="1740">
-              <folding>
-                <element signature="e#24#105#0" expanded="true" />
-              </folding>
+            <state line="23" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,17 +101,61 @@
       <file leaf-file-name="studentList.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="14" selection-start="48" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2940">
+            <state line="4" column="17" selection-start="64" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2940">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/players/models.py">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/players/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="55" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+            <state line="24" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.5432781" vertical-offset="65" max-vertical-offset="1725">
+              <folding>
+                <element signature="e#24#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/js/jquery.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/js/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="65" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="1710">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/js/bootstrap.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="27" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="28812" max-vertical-offset="29355">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,44 +164,6 @@
         <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/orm/query.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2193" column="0" selection-start="83556" selection-end="83556" vertical-scroll-proportion="0.0" vertical-offset="32475" max-vertical-offset="53085">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/result/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="30" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1020">
-              <folding>
-                <element signature="e#0#87#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="44" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/result/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/result/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
@@ -197,7 +202,6 @@
         <option value="$PROJECT_DIR$/app/rank/models.py" />
         <option value="$PROJECT_DIR$/app/checkRank.py" />
         <option value="$PROJECT_DIR$/app/static/css/custom/main.css" />
-        <option value="$PROJECT_DIR$/app/static/js/custom.js" />
         <option value="$PROJECT_DIR$/app/templates/personal_info.html" />
         <option value="$PROJECT_DIR$/todo.md" />
         <option value="$PROJECT_DIR$/app/players/nextList.py" />
@@ -208,6 +212,8 @@
         <option value="$PROJECT_DIR$/pingpong.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/app/players/models.py" />
+        <option value="$PROJECT_DIR$/app/static/js/custom.js" />
+        <option value="$PROJECT_DIR$/app/players/studentList.py" />
         <option value="$PROJECT_DIR$/app/players/views.py" />
       </list>
     </option>
@@ -284,6 +290,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PingPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014_PythonPingPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,7 +730,11 @@
       <created>1393907276428</created>
       <updated>1393907276428</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="request로 수정">
+      <created>1393908474193</created>
+      <updated>1393908474193</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -794,7 +826,8 @@
     <MESSAGE value="서버쪽 로직 변경 : 승차로 승점자판기, 호구 정하기 &#10;" />
     <MESSAGE value="gitignore변경" />
     <MESSAGE value="회원가입 json get 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 json get 구현" />
+    <MESSAGE value="request로 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="request로 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -804,27 +837,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/werkzeug/serving.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="705" column="0" selection-start="26087" selection-end="26087" vertical-scroll-proportion="0.0" vertical-offset="10575" max-vertical-offset="11325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/checkRank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="24" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -991,11 +1003,6 @@
         <state line="37" column="21" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945" />
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/werkzeug/serving.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="705" column="0" selection-start="26087" selection-end="26087" vertical-scroll-proportion="0.0" vertical-offset="10341" max-vertical-offset="11220">
@@ -1028,13 +1035,6 @@
     <entry file="file://$PROJECT_DIR$/app/templates/personal_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="67" selection-start="5376" selection-end="5376" vertical-scroll-proportion="-25.375" vertical-offset="246" max-vertical-offset="1290">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
@@ -1090,20 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="55" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="48" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pingpong.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
@@ -1111,9 +1097,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="543">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="27" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="28812" max-vertical-offset="29355">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="65" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="64" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/players/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="55" selection-start="171" selection-end="171" vertical-scroll-proportion="0.028142588" vertical-offset="60" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/players/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="31" selection-start="866" selection-end="866" vertical-scroll-proportion="0.39423078" vertical-offset="215" max-vertical-offset="1740">
+        <state line="24" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.5432781" vertical-offset="65" max-vertical-offset="1725">
           <folding>
             <element signature="e#24#105#0" expanded="true" />
           </folding>

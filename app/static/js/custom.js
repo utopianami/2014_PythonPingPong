@@ -70,6 +70,8 @@ function checkPwdValidation() {
         playerPassword: playerPwd
     };
 
+    var formData = "studentNo=" + studentNo + "&playerName=" + playerName + "&playerPassword=" + playerPwd;
+
     var xhr = new XMLHttpRequest();
     var url = "/players/register";
 
@@ -89,9 +91,9 @@ function checkPwdValidation() {
     };
 
     xhr.open("POST", url, false);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify(signUpJsonData));
-
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//    xhr.send(JSON.stringify(signUpJsonData));
+    xhr.send(formData);
 }
 
 function changeOpponentResult(target) {
