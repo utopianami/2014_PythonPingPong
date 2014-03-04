@@ -21,11 +21,10 @@ def result():
 def saveResult():
     gameResult = request.args.get('gameResult')
 
-
     player1 = Player.query.filter_by(player_id = session['player_id']).first()
     player2 = Player.query.filter_by(player_id = request.args.get('player2_id')).first()
 
-    if gameResult is "win":
+    if gameResult == "win":
         result = Result(player1.getId(), player2.getId())
         point = setRankPoint(player1, player2)
     else:
@@ -38,8 +37,6 @@ def saveResult():
     #refresh_player_Rank
     player1Point = getWinGame(player1.getId())[1] + getLoseGame(player1.getId())[1]
     player2Point = getWinGame(player2.getId())[1] + getLoseGame(player2.getId())[1]
-    print player2Point
-    print player2.soloRank
     player1.updateRank(player1Point)
     player2.updateRank(player2Point)
     db.session.commit()
