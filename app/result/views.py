@@ -26,11 +26,10 @@ def saveResult():
 
     if gameResult == "win":
         result = Result(player1.getId(), player2.getId())
-        point = setRankPoint(player1, player2, result)
+        setRankPoint(player1, player2, result)
     else:
         result = Result(player2.getId(), player1.getId())
-        point = setRankPoint(player2, player1, result)
-
+        setRankPoint(player2, player1, result)
 
     return redirect(url_for('index'))
 

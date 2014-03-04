@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/models.py" afterPath="$PROJECT_DIR$/app/players/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pingpong.py" afterPath="$PROJECT_DIR$/pingpong.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/checkRank.py" afterPath="$PROJECT_DIR$/app/checkRank.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/views.py" afterPath="$PROJECT_DIR$/app/players/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/result/views.py" afterPath="$PROJECT_DIR$/app/result/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -19,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PingPong$pingpong.coverage" NAME="pingpong Coverage Results" MODIFIED="1393969095856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PingPong$pingpong.coverage" NAME="pingpong Coverage Results" MODIFIED="1393972141911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tableTenis$tableTenis.coverage" NAME="tableTenis Coverage Results" MODIFIED="1393416637996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -75,10 +74,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/players/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="39" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
+            <state line="109" column="73" selection-start="3693" selection-end="3693" vertical-scroll-proportion="0.6770335" vertical-offset="1069" max-vertical-offset="1905">
               <folding>
                 <element signature="e#24#105#0" expanded="true" />
               </folding>
@@ -89,7 +88,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="152" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+            <state line="13" column="69" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -125,11 +124,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/result/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="27" selection-start="1645" selection-end="1653" vertical-scroll-proportion="0.6718147" vertical-offset="168" max-vertical-offset="1005">
-              <folding />
+            <state line="39" column="24" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1050">
+              <folding>
+                <element signature="e#0#87#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -201,29 +202,29 @@
         <option value="$PROJECT_DIR$/app/templates/result_register.html" />
         <option value="$PROJECT_DIR$/app/rankTable.py" />
         <option value="$PROJECT_DIR$/app/rank/models.py" />
-        <option value="$PROJECT_DIR$/app/checkRank.py" />
         <option value="$PROJECT_DIR$/app/static/css/custom/main.css" />
         <option value="$PROJECT_DIR$/app/templates/personal_info.html" />
         <option value="$PROJECT_DIR$/todo.md" />
         <option value="$PROJECT_DIR$/app/players/nextList.py" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/result/models.py" />
         <option value="$PROJECT_DIR$/app/players/studentList.py" />
         <option value="$PROJECT_DIR$/app/templates/header.html" />
         <option value="$PROJECT_DIR$/app/static/js/custom.js" />
         <option value="$PROJECT_DIR$/pingpong.py" />
-        <option value="$PROJECT_DIR$/app/players/views.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/app/players/models.py" />
         <option value="$PROJECT_DIR$/app/result/views.py" />
+        <option value="$PROJECT_DIR$/app/players/views.py" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/app/checkRank.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="985" />
+    <option name="x" value="49" />
     <option name="y" value="22" />
-    <option name="width" value="935" />
+    <option name="width" value="1871" />
     <option name="height" value="1178" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -787,14 +788,18 @@
       <created>1393966596775</created>
       <updated>1393966596775</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="기록 등록할때 예외처리  + 트랜젝션구현">
+      <created>1393969490344</created>
+      <updated>1393969490344</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="7681000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="985" y="22" width="935" height="1178" extended-state="0" />
+    <frame x="49" y="22" width="1871" height="1178" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -808,7 +813,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3315508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1656868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22091974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -857,7 +862,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="mainpage로드" />
     <MESSAGE value="29할일 업데이트" />
     <MESSAGE value="개인 페이지 json 전송" />
     <MESSAGE value="to do 수정" />
@@ -882,7 +886,8 @@
     <MESSAGE value="login인 성공시 player_id세션값 전달" />
     <MESSAGE value="1. 회원가입 성공시  int가 가 아니라 &quot;int&quot;로 문자열 전송 &#10;&#10;" />
     <MESSAGE value="선수등록 예외처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="선수등록 예외처리" />
+    <MESSAGE value="기록 등록할때 예외처리  + 트랜젝션구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="기록 등록할때 예외처리  + 트랜젝션구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -928,7 +933,9 @@
     <entry file="file://$PROJECT_DIR$/app/result/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="0" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1005">
-          <folding />
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,27 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/result/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/result/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="7" selection-start="1463" selection-end="1463" vertical-scroll-proportion="1.0911528" vertical-offset="131" max-vertical-offset="1185">
@@ -1135,13 +1121,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="208" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/signUp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="16" selection-start="1606" selection-end="1606" vertical-scroll-proportion="-10.041667" vertical-offset="224" max-vertical-offset="1020">
@@ -1156,20 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/checkRank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="42" selection-start="1788" selection-end="1788" vertical-scroll-proportion="1.1962025" vertical-offset="0" max-vertical-offset="1305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pingpong.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.094936706" vertical-offset="0" max-vertical-offset="790">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="43" selection-start="59" selection-end="59" vertical-scroll-proportion="0.03797468" vertical-offset="0" max-vertical-offset="790">
@@ -1177,33 +1142,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studentList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="18" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pingpong.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="24" selection-end="47" vertical-scroll-proportion="0.03797468" vertical-offset="0" max-vertical-offset="790">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/result/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/players/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/result/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.37679425" vertical-offset="0" max-vertical-offset="836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="152" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+        <state line="13" column="69" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/players/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+        <state line="13" column="36" selection-start="425" selection-end="425" vertical-scroll-proportion="-0.07655502" vertical-offset="244" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/views.py">
+    <entry file="file://$PROJECT_DIR$/app/checkRank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="39" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
+        <state line="45" column="60" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.80741626" vertical-offset="0" max-vertical-offset="836">
           <folding>
-            <element signature="e#24#105#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/result/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="27" selection-start="1645" selection-end="1653" vertical-scroll-proportion="0.6718147" vertical-offset="168" max-vertical-offset="1005">
-          <folding />
+        <state line="39" column="24" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/players/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="73" selection-start="3693" selection-end="3693" vertical-scroll-proportion="0.6770335" vertical-offset="1069" max-vertical-offset="1905">
+          <folding>
+            <element signature="e#24#105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

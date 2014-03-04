@@ -7,19 +7,18 @@ app.config.from_object('config')
 
 db = SQLAlchemy(app)
 
+
 from checkRank import *
 @app.route('/')
 def index():
-    jsonPlayers = getInfo()
-    startNum = 1
+    allPlayer = Player.query.order_by(Player.totalPoint.desc()).all()
+    countNo = 1
     playerInfo = []
-    for player in jsonPlayers:
-        playerInfo.append(
-            dict(id =player.player_id, no=startNum, rank=player.rank, name=player.name, win=player.win, lose=player.lose, point=player.point))
-        startNum += 1
+    for player in allPlayer:
+        playerInfo.append(dict(id=player.player_id, no=countNo, rank=player.getSoloRankName(),
+                               name=player.playerName, win=player.totalWin, lose=player.totalLose, point=player.totalPoint))
+        countNo += 1
     return render_template('main.html', playerInfo = playerInfo)
-
-
 
 from app.players.views import mod as playersModule
 from app.result.views import mod as resultModule

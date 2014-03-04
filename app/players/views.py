@@ -110,16 +110,12 @@ def personal(id):
     notPushOver = totalDict[pushOverPlayer]["win"] - totalDict[pushOverPlayer]["lose"]
     notRevenge = totalDict[revengePlayer]["win"] - totalDict[revengePlayer]["lose"]
 
-    print "A"
     if notPushOver < 0:
-        print pushOverPlayer
         return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = None)
     if notRevenge > 0:
-        print "c"
         print pushOverPlayer
         return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = pushOverInfo)
 
-    print "B"
     return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
 
 
