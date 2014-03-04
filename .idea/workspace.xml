@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/players/studentList.py" afterPath="$PROJECT_DIR$/studentList.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/2014_PythonPingPong.iml" afterPath="$PROJECT_DIR$/.idea/2014_PythonPingPong.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/models.py" afterPath="$PROJECT_DIR$/app/players/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/views.py" afterPath="$PROJECT_DIR$/app/players/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tableTenis.iws" />
@@ -76,7 +72,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/players/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="339" selection-end="339" vertical-scroll-proportion="0.2252816" vertical-offset="0" max-vertical-offset="1920">
+            <state line="84" column="8" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.17396747" vertical-offset="1121" max-vertical-offset="1920">
               <folding>
                 <element signature="e#24#105#0" expanded="true" />
               </folding>
@@ -707,7 +703,11 @@
       <created>1393922907274</created>
       <updated>1393922907274</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="login인 성공시 player_id세션값 전달">
+      <created>1393925478259</created>
+      <updated>1393925478259</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -777,7 +777,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="점수등록 서버쪽 완료" />
     <MESSAGE value="session 수정" />
     <MESSAGE value="logout url등록" />
     <MESSAGE value="mainpage로드" />
@@ -802,7 +801,8 @@
     <MESSAGE value="점수등록에서 패배가 기록되지 않는 에러 수정" />
     <MESSAGE value="점수 등록 부분 수정 : -10이후에 다시 올라갈경우 -안됨" />
     <MESSAGE value="개인페이지 클라이언트 전달 에러 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="개인페이지 클라이언트 전달 에러 수정" />
+    <MESSAGE value="login인 성공시 player_id세션값 전달" />
+    <option name="LAST_COMMIT_MESSAGE" value="login인 성공시 player_id세션값 전달" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1091,7 +1091,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/players/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="339" selection-end="339" vertical-scroll-proportion="0.2252816" vertical-offset="0" max-vertical-offset="1920">
+        <state line="84" column="8" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.17396747" vertical-offset="1121" max-vertical-offset="1920">
           <folding>
             <element signature="e#24#105#0" expanded="true" />
           </folding>
