@@ -11,11 +11,18 @@ class Player(db.Model):
     teamRank = db.Column(db.Integer)
     minusMaginot = db.Column(db.Integer)
 
+    totalWin = db.Column(db.Integer)
+    totalLose = db.Column(db.Integer)
+    totalPoint = db.Column(db.Integer)
+
     def __init__(self, playerName, password):
         self.playerName = playerName
         self.playerPassword = password
         self.soloRank = 1
         self.minusMaginot = 0
+        self.totalWin = 0
+        self.totalLose = 0
+        self.totalPoint = 0
 
     def __repr__(self):
         return '<User %r>' % (self.playerName)
@@ -29,6 +36,10 @@ class Player(db.Model):
     def getPlayerName(self):
         return self.playerName
 
+    def plusTotalPoint(self, point):
+        self.totalPoint += point
+        self.updateRank()
+
     def getSoloRankName(self):
         rank = self.soloRank
         if rank is 4:
@@ -40,16 +51,16 @@ class Player(db.Model):
         if rank is 1:
             return "Single A"
 
-    def updateRank(self, point):
-        if point >= 50:
+    def updateRank(self):
+        if self.totalPoint >= 50:
             self.soloRank = 4
-        elif point >= 30:
+        elif self.totalPoint >= 30:
             self.soloRank = 3
-        elif point >= 15:
+        elif self.totalPoint >= 15:
             self.soloRank = 2
         else :
             self.soloRank = 1
-            if point <= -10:
+            if self.totalPoint <= -10:
                 self.minusMaginot = 1
             else:
                 self.minusMaginot = 0

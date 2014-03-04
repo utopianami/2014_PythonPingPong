@@ -21,7 +21,6 @@ def register():
     try:
         studnetNo = int(request.form['studentNo'])
     except:
-        print "A"
         return "INVALID_SIGNUP_DATA"
 
     requestName = request.form['playerName']
@@ -98,7 +97,7 @@ def personal(id):
                 revengeGap = gap
                 revengePlayer = player
 
-    personalPageInfo = {"name" :curPlayer.getPlayerName() , "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalRank" :curPlayer.getSoloRankName()}
+    personalPageInfo = {"name" :curPlayer.getPlayerName() , "totalWin" : curPlayer.totalWin, "totalLose" : curPlayer.totalLose, "totalRank" :curPlayer.getSoloRankName()}
 
     pushOverObject = Player.query.filter_by(player_id = pushOverPlayer).first()
     revengeObject = Player.query.filter_by(player_id = revengePlayer).first()

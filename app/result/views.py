@@ -26,26 +26,30 @@ def saveResult():
 
     if gameResult == "win":
         result = Result(player1.getId(), player2.getId())
-        point = setRankPoint(player1, player2)
+        point = setRankPoint(player1, player2, result)
     else:
         result = Result(player2.getId(), player1.getId())
-        point = setRankPoint(player2, player1)
+        point = setRankPoint(player2, player1, result)
 
-    result.setPoint(point)
-    db.session.add(result)
-
-    #refresh_player_Rank
-    player1Point = getWinGame(player1.getId())[1] + getLoseGame(player1.getId())[1]
-    player2Point = getWinGame(player2.getId())[1] + getLoseGame(player2.getId())[1]
-    player1.updateRank(player1Point)
-    player2.updateRank(player2Point)
-    db.session.commit()
 
     return redirect(url_for('index'))
 
-def setRankPoint(winner, loser):
+def setRankPoint(winner, loser, result):
     playerGap = winner.getSoloRank() - loser.getSoloRank()
     point = checkRankPoint(playerGap, loser)
+
+    winner.totalWin += 1
+    winner.plusTotalPoint(point[0])
+    loser.totalLose += 1
+    loser.plusTotalPoint(point[1])
+
+    try:
+        result.setPoint(point)
+        db.session.add(result)
+        db.session.commit()
+    except:
+        db.session.rollback()
+
     return point
 
 def checkRankPoint(playerGap, loser):
