@@ -1,12 +1,12 @@
 #-*- coding: utf-8 -*-
 
 from flask import Blueprint, request, render_template, session, redirect, url_for
-from flask.ext.login import LoginManager, logout_user, login_required
+from flask.ext.login import LoginManager
+
 from app import db, app
-from app.players.models import Player
-from app.result.models import Result
 from app.checkRank import *
-from app.players.studentList import studentList
+import studentList
+
 
 mod = Blueprint('players', __name__, url_prefix='/players')
 login_manager = LoginManager()
@@ -35,7 +35,7 @@ def register():
         db.session.add(newPlayer)
         db.session.commit()
     session['player_id'] = newPlayer.getId()
-    return "SIGNUP_SUCCESS"
+    return session['player_id']
 
 
 @mod.route('/login', methods=['GET', 'POST'])

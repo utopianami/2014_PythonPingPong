@@ -53,5 +53,4 @@ class Player(db.Model):
                 self.minusMaginot = 1
             else:
                 self.minusMaginot = 0
-        db.session.commit()
 
