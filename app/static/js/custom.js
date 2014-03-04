@@ -1,6 +1,7 @@
 window.addEventListener("load", function(e) {
 
     var idObj = {
+        loginValidation: "login-form",
         signUpValidation: "signup-form",
         playerRegister: "player-register-btn",
         sendMatchInvitationToPushover: "send-invitation-pushover",
@@ -28,8 +29,13 @@ window.addEventListener("load", function(e) {
         switch (target.id) {
             case idObj.signUpValidation:
                 e.preventDefault();
-                checkPwdValidation();
+                checkSignUpValidation();
                 break;
+            case idObj.loginValidation:
+                e.preventDefault();
+                checkLoginValidation();
+                break;
+
         }
 
         switch (target.className) {
@@ -41,7 +47,7 @@ window.addEventListener("load", function(e) {
 
 }, false);
 
-function checkPwdValidation() {
+function checkSignUpValidation() {
 
     var studentNo = document.getElementById("studentNo").value;
     var playerName = document.getElementById("playerName").value;
@@ -94,4 +100,41 @@ function changeOpponentResult() {
     } else {
         opponentResult.innerHTML = "승리";
     }
+}
+
+function checkLoginValidation() {
+    var playerName = document.getElementById("loginPlayerName").value;
+    var playerPwd = document.getElementById("loginPlayerPwd").value;
+
+    if (!playerName || !playerPwd) {
+        document.getElementById("loginFailText").style.display = "none";
+        document.getElementById("loginFieldEmptyText").style.display = "initial";
+        return;
+    }
+
+    var formData = "playerName=" + playerName + "&playerPassword=" + playerPwd;
+
+    var xhr = new XMLHttpRequest();
+    var url = "/players/login";
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var resultString = xhr.responseText;
+
+            if (resultString === "LOGIN_FAIL") {
+                document.getElementById("loginFailText").style.display = "initial";
+                document.getElementById("loginFieldEmptyText").style.display = "none";
+
+            } else {
+                document.getElementById("login-form").style.display = "none";
+                document.querySelector(".after_signin").style.display = "initial";
+                document.getElementById("player-register-btn").style.display = "none";
+                document.getElementById("href-personal-page").href = "/players/" + resultString;
+            }
+        }
+    };
+
+    xhr.open("POST", url, false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(formData);
 }

@@ -23,7 +23,8 @@ a, u {
     margin-bottom : 10px;
 }
 
-#loginFailText {
+#loginFailText, #loginFieldEmptyText {
+    display : none;
     color : antiquewhite;
 }
 
