@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from flask import Blueprint, request, render_template, session, redirect, url_for
 from flask.ext.login import LoginManager, logout_user, login_required
 from app import db, app
@@ -17,20 +19,24 @@ def signUp():
 @mod.route('/register', methods=["POST"])
 def register():
     #checknextList
-    requestName = request.form['playerName']
-    if requestName not in studentList & request.form['studentNo'] != studentList[requestName]:
+    getDict = request.get_json()
+    requestName = getDict['playerName'].encode(encoding='utf-8', errors='strict')
+    studnetNo = int(getDict['studentNo'])
+    print studentList[requestName]
+
+    if requestName not in studentList or studnetNo != studentList[requestName]:
         return "INVALID_SIGNUP_DATA"
 
-    isExist = Player.query.filter_by(playerName = requestName).first()
+    isExist = Player.query.filter_by(playerName = "이영남").first()
+    print isExist
     if isExist is not None:
         return "INVALID_SIGNUP_DATA"
     else:
-        newPlayer = Player(requestName, request.form['playerPassword'])
+        newPlayer = Player(requestName, getDict['playerPassword'])
         db.session.add(newPlayer)
         db.session.commit()
     session['player_id'] = newPlayer.getId()
     return "SIGNUP_SUCCESS"
-
 
 
 @mod.route('/login', methods=['GET', 'POST'])
