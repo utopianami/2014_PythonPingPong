@@ -46,12 +46,12 @@ def login():
         player = Player.query.filter_by(playerName = playerName).first()
 
         if player == None:
-            return redirect(url_for('index', loginFail="True"))
+            return "LOGIN_FAIL"
         if player.playerPassword == password:
             session['player_id'] = player.getId()
-            return redirect(url_for('index'))
+            return "LOGIN_SUCCESS"
 
-    return redirect(url_for('index', loginFail="True"))
+    return "LOGIN_FAIL"
 
 @mod.route('/logout')
 def logout():
@@ -102,16 +102,21 @@ def personal(id):
     revengeInfo = {"player" :revengeObject.getPlayerName(), "win" : totalDict[revengePlayer]["win"], "lose" : totalDict[revengePlayer]["lose"], "point" : totalDict[revengePlayer]["offerPoint"]}
 
     if winTable.count() + loseTable.count() < 3:
-        print "a"
         return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = None)
 
     notPushOver = totalDict[pushOverPlayer]["win"] - totalDict[pushOverPlayer]["lose"]
     notRevenge = totalDict[revengePlayer]["win"] - totalDict[revengePlayer]["lose"]
+
+    print "A"
     if notPushOver < 0:
+        print pushOverPlayer
         return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = None)
     if notRevenge > 0:
-        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = pushOverPlayer)
+        print "c"
+        print pushOverPlayer
+        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = pushOverInfo)
 
+    print "B"
     return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
 
 
