@@ -34,13 +34,15 @@ def saveResult():
 
     result.setPoint(point)
     db.session.add(result)
-    db.session.commit()
 
     #refresh_player_Rank
     player1Point = getWinGame(player1.getId())[1] + getLoseGame(player1.getId())[1]
     player2Point = getWinGame(player2.getId())[1] + getLoseGame(player2.getId())[1]
+    print player2Point
+    print player2.soloRank
     player1.updateRank(player1Point)
     player2.updateRank(player2Point)
+    db.session.commit()
 
     return redirect(url_for('index'))
 

@@ -32,7 +32,7 @@ class Player(db.Model):
     def getSoloRankName(self):
         rank = self.soloRank
         if rank is 4:
-            return "major"
+            return "Major"
         if rank is 3:
             return "Triple A"
         if rank is 2:
@@ -43,12 +43,13 @@ class Player(db.Model):
     def updateRank(self, point):
         if point >= 50:
             self.soloRank = 4
-        if point >= 30:
+        elif point >= 30:
             self.soloRank = 3
-        if point >= 15:
+        elif point >= 15:
             self.soloRank = 2
         else :
             self.soloRank = 1
-            if point < -10:
+            if point <= -10:
                 self.minusMaginot = 1
+        db.session.commit()
 
