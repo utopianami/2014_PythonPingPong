@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/result/views.py" afterPath="$PROJECT_DIR$/app/result/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/models.py" afterPath="$PROJECT_DIR$/app/players/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tableTenis.iws" />
@@ -70,19 +70,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/players/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="4" selection-start="727" selection-end="771" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
+            <state line="23" column="4" selection-start="727" selection-end="771" vertical-scroll-proportion="-0.7490494" vertical-offset="846" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="studentList.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="12" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2940">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/players/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="37" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="930">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/result/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="9" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.27756655" vertical-offset="216" max-vertical-offset="1005">
+            <state line="57" column="22" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1005">
               <folding>
                 <element signature="e#0#87#0" expanded="true" />
               </folding>
@@ -663,7 +681,11 @@
       <created>1393912613711</created>
       <updated>1393912613711</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="점수등록에서 패배가 기록되지 않는 에러 수정">
+      <created>1393920066673</created>
+      <updated>1393920066673</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -673,6 +695,7 @@
     <frame x="985" y="22" width="935" height="1178" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -695,7 +718,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912534" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39945897" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -733,7 +755,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="result_register.html&#10;you can receive select tag value at server-side." />
     <MESSAGE value="test" />
     <MESSAGE value="db생성 파일 분리" />
     <MESSAGE value="점수등록 서버쪽 완료" />
@@ -758,7 +779,8 @@
     <MESSAGE value="request로 수정" />
     <MESSAGE value="회원가입 로직 완료" />
     <MESSAGE value="rank Commit부분 수정 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="rank Commit부분 수정 완료" />
+    <MESSAGE value="점수등록에서 패배가 기록되지 않는 에러 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="점수등록에서 패배가 기록되지 않는 에러 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -974,18 +996,6 @@
         <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.40436456" vertical-offset="0" max-vertical-offset="779" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="18" selection-start="989" selection-end="989" vertical-scroll-proportion="0.52380955" vertical-offset="144" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="64" selection-end="70" vertical-scroll-proportion="0.07702182" vertical-offset="0" max-vertical-offset="2940" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.4308094" vertical-offset="0" max-vertical-offset="766">
@@ -1028,19 +1038,33 @@
         <state line="2193" column="0" selection-start="83556" selection-end="83556" vertical-scroll-proportion="0.17110266" vertical-offset="32475" max-vertical-offset="53085" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/players/views.py">
+    <entry file="file://$PROJECT_DIR$/app/result/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="727" selection-end="771" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
+        <state line="57" column="22" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1005">
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/players/studentList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2940">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/result/views.py">
+    <entry file="file://$PROJECT_DIR$/app/players/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="9" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.27756655" vertical-offset="216" max-vertical-offset="1005">
-          <folding>
-            <element signature="e#0#87#0" expanded="true" />
-          </folding>
+        <state line="54" column="37" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/players/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="727" selection-end="771" vertical-scroll-proportion="-0.7490494" vertical-offset="846" max-vertical-offset="1635">
+          <folding />
         </state>
       </provider>
     </entry>

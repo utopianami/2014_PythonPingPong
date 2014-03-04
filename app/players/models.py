@@ -51,5 +51,7 @@ class Player(db.Model):
             self.soloRank = 1
             if point <= -10:
                 self.minusMaginot = 1
+            else:
+                self.minusMaginot = 0
         db.session.commit()
 
