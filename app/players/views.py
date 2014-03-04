@@ -95,14 +95,22 @@ def personal(id):
                 revengePlayer = player
 
     personalPageInfo = {"name" :curPlayer.getPlayerName() , "totalWin" : winTable.count(), "totalLose" : loseTable.count(), "totalRank" :curPlayer.getSoloRankName()}
-    if winTable.count() + loseTable.count() < 3:
-        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = None)
-
 
     pushOverObject = Player.query.filter_by(player_id = pushOverPlayer).first()
     revengeObject = Player.query.filter_by(player_id = revengePlayer).first()
     pushOverInfo = { "player" : pushOverObject.getPlayerName(), "win" : totalDict[pushOverPlayer]["win"], "lose" : totalDict[pushOverPlayer]["lose"], "point" :  totalDict[pushOverPlayer]["point"]}
     revengeInfo = {"player" :revengeObject.getPlayerName(), "win" : totalDict[revengePlayer]["win"], "lose" : totalDict[revengePlayer]["lose"], "point" : totalDict[revengePlayer]["offerPoint"]}
+
+    if winTable.count() + loseTable.count() < 3:
+        print "a"
+        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = None)
+
+    notPushOver = totalDict[pushOverPlayer]["win"] - totalDict[pushOverPlayer]["lose"]
+    notRevenge = totalDict[revengePlayer]["win"] - totalDict[revengePlayer]["lose"]
+    if notPushOver < 0:
+        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = None)
+    if notRevenge > 0:
+        return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = pushOverPlayer)
 
     return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = revengeInfo, pushOverInfo = pushOverInfo)
 
