@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/2014_PythonPingPong.iml" afterPath="$PROJECT_DIR$/.idea/2014_PythonPingPong.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/views.py" afterPath="$PROJECT_DIR$/app/players/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -17,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PingPong$pingpong.coverage" NAME="pingpong Coverage Results" MODIFIED="1393939004917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PingPong$pingpong.coverage" NAME="pingpong Coverage Results" MODIFIED="1393966568807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tableTenis$tableTenis.coverage" NAME="tableTenis Coverage Results" MODIFIED="1393416637996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -76,7 +74,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/players/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="356" selection-end="356" vertical-scroll-proportion="0.22613065" vertical-offset="0" max-vertical-offset="1920">
+            <state line="19" column="15" selection-start="494" selection-end="494" vertical-scroll-proportion="0.33919597" vertical-offset="15" max-vertical-offset="1980">
               <folding>
                 <element signature="e#24#105#0" expanded="true" />
               </folding>
@@ -497,6 +495,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -518,9 +519,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -756,7 +754,11 @@
       <created>1393925478259</created>
       <updated>1393925478259</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="1. 회원가입 성공시  int가 가 아니라 &quot;int&quot;로 문자열 전송 &#10;&#10;">
+      <created>1393939174457</created>
+      <updated>1393939174457</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -789,8 +791,8 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912534" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39945897" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -809,9 +811,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32912534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39945897" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32912534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -826,7 +828,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="session 수정" />
     <MESSAGE value="logout url등록" />
     <MESSAGE value="mainpage로드" />
     <MESSAGE value="29할일 업데이트" />
@@ -851,7 +852,8 @@
     <MESSAGE value="점수 등록 부분 수정 : -10이후에 다시 올라갈경우 -안됨" />
     <MESSAGE value="개인페이지 클라이언트 전달 에러 수정" />
     <MESSAGE value="login인 성공시 player_id세션값 전달" />
-    <option name="LAST_COMMIT_MESSAGE" value="login인 성공시 player_id세션값 전달" />
+    <MESSAGE value="1. 회원가입 성공시  int가 가 아니라 &quot;int&quot;로 문자열 전송 &#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 회원가입 성공시  int가 가 아니라 &quot;int&quot;로 문자열 전송 &#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -889,9 +891,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/players/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="37" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="54" column="37" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/result/views.py">
@@ -985,9 +985,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="42" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="255">
-          <folding />
-        </state>
+        <state line="1" column="42" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/players/views.py">
@@ -1052,9 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.4308094" vertical-offset="0" max-vertical-offset="766">
-          <folding />
-        </state>
+        <state line="23" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.4308094" vertical-offset="0" max-vertical-offset="766" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/personal_info.html">
@@ -1096,13 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/result/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="22" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="660">
@@ -1119,16 +1108,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.38425046" vertical-offset="120" max-vertical-offset="2175">
-          <folding />
-        </state>
+        <state line="35" column="39" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.38425046" vertical-offset="120" max-vertical-offset="2175" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/players/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="25" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.66888046" vertical-offset="0" max-vertical-offset="1054">
-          <folding />
-        </state>
+        <state line="47" column="25" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.66888046" vertical-offset="0" max-vertical-offset="1054" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pingpong.py">
@@ -1145,9 +1130,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/result/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/players/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="356" selection-end="356" vertical-scroll-proportion="0.22613065" vertical-offset="0" max-vertical-offset="1920">
+        <state line="19" column="15" selection-start="494" selection-end="494" vertical-scroll-proportion="0.33919597" vertical-offset="15" max-vertical-offset="1980">
           <folding>
             <element signature="e#24#105#0" expanded="true" />
           </folding>

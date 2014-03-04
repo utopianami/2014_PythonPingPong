@@ -18,9 +18,13 @@ def signUp():
 
 @mod.route('/register', methods=["POST"])
 def register():
-    #checkstudentList
+    try:
+        studnetNo = int(request.form['studentNo'])
+    except:
+        print "A"
+        return "INVALID_SIGNUP_DATA"
+
     requestName = request.form['playerName']
-    studnetNo = int(request.form['studentNo'])
     requestNameUTF = requestName.encode('utf-8')
 
 
