@@ -5,7 +5,7 @@ from flask.ext.login import LoginManager
 
 from app import db, app
 from app.checkRank import *
-import studentList
+from studentList import studentList
 
 
 mod = Blueprint('players', __name__, url_prefix='/players')
@@ -35,7 +35,7 @@ def register():
         db.session.add(newPlayer)
         db.session.commit()
     session['player_id'] = newPlayer.getId()
-    return session['player_id']
+    return "session['player_id']"
 
 
 @mod.route('/login', methods=['GET', 'POST'])
