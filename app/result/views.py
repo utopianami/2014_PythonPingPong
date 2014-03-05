@@ -70,10 +70,10 @@ def checkVerified(playerId):
 
     if winList:
         verifiedWin = [dict(result_id = result.result_id, result = "승", opponent = getPlayer(result.loser).playerName,
-                            date = None)for result in winList]
+                            date = transferDate(result.resultDate))for result in winList]
     if loseList:
         verifiedLose = [dict(result_id = result.result_id, result = "패", opponent = getPlayer(result.winner).playerName,
-                             date = None)for result in loseList]
+                             date = transferDate(result.resultDate))for result in loseList]
 
 
     sendVerifiedList.append(verifiedWin)
@@ -81,7 +81,8 @@ def checkVerified(playerId):
     return sendVerifiedList
 
 def transferDate(date):
-    transfer = str(date.month)+"월"+""+str(date.day)+"일"
+    month = {1:"Jan", 2:"Feb", 3:"Mar", 4:"Apr", 5:"May", 6:"Jun",7:"Jul", 8:"Aug", 9:"Sep", 10:"Oct", 11:"Nov",12:"Dec"}
+    transfer = month[date.month]+" "+str(date.day)
     return transfer
 
 def getPlayer(id):
@@ -89,7 +90,6 @@ def getPlayer(id):
     return player
 
 
-##취소로직 추가 필요
 @mod.route('/verify', methods=['POST'])
 def verify():
     try:
