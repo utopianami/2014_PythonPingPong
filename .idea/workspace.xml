@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/2014_PythonPingPong.iml" afterPath="$PROJECT_DIR$/.idea/2014_PythonPingPong.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tableTenis.iws" />
@@ -84,7 +82,7 @@
       <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/static/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="23" selection-start="3412" selection-end="3412" vertical-scroll-proportion="1.7798165" vertical-offset="396" max-vertical-offset="3090">
+            <state line="30" column="22" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.08256881" vertical-offset="396" max-vertical-offset="3090">
               <folding />
             </state>
           </provider>
@@ -651,7 +649,7 @@
       <workItem from="1393471692786" duration="6719000" />
       <workItem from="1393925685191" duration="962000" />
       <workItem from="1394038964631" duration="31000" />
-      <workItem from="1394039031069" duration="29000" />
+      <workItem from="1394039031069" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="result_register.html&#10;you can receive select tag value at server-side.">
       <created>1393480854256</created>
@@ -825,11 +823,15 @@
       <created>1394034695423</created>
       <updated>1394034695423</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="result register bug fix&#10;">
+      <created>1394039077804</created>
+      <updated>1394039077804</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7741000" />
+    <option name="totallyTimeSpent" value="7794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
@@ -848,6 +850,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912534" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -859,7 +862,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39945897" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -895,7 +897,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ver1 베포 버그 수정" />
     <MESSAGE value="로그인시 기존 학번/이름 비교 로직 구현" />
     <MESSAGE value="승점 로직 변경" />
     <MESSAGE value="서버쪽 로직 변경 : 승차로 승점자판기, 호구 정하기 &#10;" />
@@ -920,7 +921,8 @@
     <MESSAGE value="승인된 테이블 로직 수정" />
     <MESSAGE value="메인 미등록 페이지 불러오기 수정" />
     <MESSAGE value="메인 미등록 페이지 불러오기 클라이언트 오류 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="메인 미등록 페이지 불러오기 클라이언트 오류 수정" />
+    <MESSAGE value="result register bug fix&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="result register bug fix&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1212,7 +1214,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="23" selection-start="3412" selection-end="3412" vertical-scroll-proportion="1.7798165" vertical-offset="396" max-vertical-offset="3090">
+        <state line="30" column="22" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.08256881" vertical-offset="396" max-vertical-offset="3090">
           <folding />
         </state>
       </provider>
