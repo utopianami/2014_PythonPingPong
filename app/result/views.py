@@ -94,22 +94,21 @@ def getPlayer(id):
 def verify():
     try:
         verifiedId = request.form["result_id"]
-        verfiedMessage = request.form["status"]
+        verfiedMessage = int(request.form["status"])
         verifiedResult = Result.query.filter_by(result_id = verifiedId).first()
 
-        if verfiedMessage == "check":
+        if verfiedMessage == 1:
             verifiedResult.isVerified =1
             winner = getPlayer(verifiedResult.winner)
             winner.totalWin += 1
-            winner.plusTotalPoint += verifiedResult.winPoint
+            winner.plusTotalPoint(verifiedResult.winPoint)
 
             loser = getPlayer(verifiedResult.loser)
             loser.totalLose += 1
-            loser.plusTotalPoint += verifiedResult.losePoint
+            loser.plusTotalPoint(verifiedResult.losePoint)
 
-        if verfiedMessage == "cancel":
+        if verfiedMessage == 2:
             verifiedResult.isVerified =2
-
 
         db.session.commit()
         return "IS_VERIFIED"
