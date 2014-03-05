@@ -1,6 +1,5 @@
 from flask import Flask, render_template, jsonify, session
 from flask.ext.sqlalchemy import SQLAlchemy
-from app.result.views import checkVerified
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -9,10 +8,15 @@ db = SQLAlchemy(app)
 
 
 from checkRank import *
+from app.result.views import checkVerified
+
 @app.route('/')
 def index():
-    playerId = session["player_id"]
-    notVierfiedList =checkVerified(playerId)
+    if "player_id" in session:
+        playerId = session["player_id"]
+        notVerifiedList =checkVerified(playerId)
+    else:
+        notVerifiedList =[[],[]]
 
     allPlayer = Player.query.order_by(Player.totalPoint.desc()).all()
     countNo = 1
@@ -22,7 +26,7 @@ def index():
                                name=player.playerName, win=player.totalWin, lose=player.totalLose, point=player.totalPoint))
         countNo += 1
 
-    return render_template('main.html', playerInfo = playerInfo, verifiedWin = notVierfiedList[0], verifiedLose = notVierfiedList[1])
+    return render_template('main.html', playerInfo = playerInfo, verifiedWin = notVerifiedList[0], verifiedLose = notVerifiedList[1])
 
 from app.players.views import mod as playersModule
 from app.result.views import mod as resultModule

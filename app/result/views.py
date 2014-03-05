@@ -63,18 +63,24 @@ def checkRankPoint(playerGap, loser):
     return point
 
 def checkVerified(playerId):
-    winList  = Result.query.filter_by(winner = playerId, isVerified = 0)
-    loseList = Result.query.filter_by(loser = playerId, isVerified = 0)
+    winList  = Result.query.filter_by(winner = playerId, isVerified = 0).all()
+    loseList = Result.query.filter_by(loser = playerId, isVerified = 0).all()
 
     sendVerifiedList = []
     verifiedWin =[]
     verifiedLose = []
-    if not winList ==False:
-        verifiedWin = [dict(result_id = result.result_id, result = "승", opponent = getName(result.loser), date = result.resultDate)for result in winList]
-    if not loseList ==False:
-        verifiedLose = [dict(result_id = result.result_id, result = "패", opponent = getName(result.win), date = result.resultDate)for result in loseList]
+    print not winList == False
+    print winList
+    if winList:
+        verifiedWin = [dict(result_id = result.result_id, result = "승", opponent = getName(result.loser),
+                            date = result.resultDate)for result in winList]
+    if loseList:
+        verifiedLose = [dict(result_id = result.result_id, result = "패", opponent = getName(result.winner),
+                             date = result.resultDate)for result in loseList]
 
-    return sendVerifiedList[verifiedWin, verifiedLose]
+    sendVerifiedList.append(verifiedWin)
+    sendVerifiedList.append(verifiedLose)
+    return sendVerifiedList
 
 def getName(id):
     player = Player.query.filter_by(player_id = id).first()
@@ -89,7 +95,6 @@ def verify():
     verifiedResult = Result.query.filter_by(result_id = verifiedId).first()
 
 
-    #requseet form type확인
     if verfiedMessage == "check":
         verifiedResult.isVerified =1
     if verfiedMessage == "cancel":
