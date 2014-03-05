@@ -649,7 +649,7 @@
       <workItem from="1393471692786" duration="6719000" />
       <workItem from="1393925685191" duration="962000" />
       <workItem from="1394038964631" duration="31000" />
-      <workItem from="1394039031069" duration="82000" />
+      <workItem from="1394039031069" duration="91000" />
     </task>
     <task id="LOCAL-00001" summary="result_register.html&#10;you can receive select tag value at server-side.">
       <created>1393480854256</created>
@@ -827,11 +827,15 @@
       <created>1394039077804</created>
       <updated>1394039077804</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="result register bug fix&#10;">
+      <created>1394039120637</created>
+      <updated>1394039120637</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7794000" />
+    <option name="totallyTimeSpent" value="7803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
