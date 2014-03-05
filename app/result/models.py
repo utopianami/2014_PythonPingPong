@@ -1,4 +1,5 @@
-from datetime import datetime
+#-*- coding: utf-8 -*-
+from datetime import datetime, date
 from app import db
 
 class Result(db.Model):
@@ -6,7 +7,7 @@ class Result(db.Model):
 
 
     result_id = db.Column(db.Integer, primary_key=True)
-    resultDate = db.Column(db.DateTime)
+    resultDate = db.Column(db.DATETIME)
 
     winner = db.Column(db.Integer)
     loser = db.Column(db.Integer)

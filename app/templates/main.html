@@ -51,7 +51,7 @@
                    </thead>
                    <tbody>
                    {% if verifiedWin %}
-                       {% for row in winList %}
+                       {% for row in verifiedWin %}
                            <tr id="win-row-{{ row.result_id }}">
                                <td>승</td>
                                <td>{{ row.opponent }}</td>
@@ -61,7 +61,7 @@
                            </tr>
                        {% endfor %}
                    {% endif %}
-                   {% if verifiedLose %}
+                   {% if verifiedWinLose %}
                        {% for row in loseList %}
                            <tr id="lose-row-{{ row.result_id }}">
                                <td>패</td>

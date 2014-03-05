@@ -4,6 +4,7 @@ from app.result.models import Result
 from app.players.models import Player
 from app import db
 from app.checkRank import *
+from datetime import datetime, date
 
 mod = Blueprint('result', __name__, url_prefix='/result')
 
@@ -25,30 +26,26 @@ def saveResult():
     player1 = Player.query.filter_by(player_id = session['player_id']).first()
     player2 = Player.query.filter_by(player_id = request.args.get('player2_id')).first()
 
+
     if gameResult == "win":
         result = Result(player1.getId(), player2.getId())
-        setRankPoint(player1, player2, result)
+        point = setRankPoint(player1, player2)
     else:
         result = Result(player2.getId(), player1.getId())
-        setRankPoint(player2, player1, result)
+        point = setRankPoint(player2, player1)
+
+
+    result.setPoint(point)
+    db.session.add(result)
+    db.session.commit()
 
     return redirect(url_for('index'))
 
-def setRankPoint(winner, loser, result):
+def setRankPoint(winner, loser):
     playerGap = winner.getSoloRank() - loser.getSoloRank()
     point = checkRankPoint(playerGap, loser)
 
-    winner.totalWin += 1
-    winner.plusTotalPoint(point[0])
-    loser.totalLose += 1
-    loser.plusTotalPoint(point[1])
-
-    try:
-        result.setPoint(point)
-        db.session.add(result)
-        db.session.commit()
-    except:
-        db.session.rollback()
+    return point
 
 def checkRankPoint(playerGap, loser):
     bonusPoint = {-3:[6, 0], -2:[5, 0], -1:[4, -1], 0:[3, -2],
@@ -69,36 +66,52 @@ def checkVerified(playerId):
     sendVerifiedList = []
     verifiedWin =[]
     verifiedLose = []
-    print not winList == False
-    print winList
+
+
     if winList:
-        verifiedWin = [dict(result_id = result.result_id, result = "승", opponent = getName(result.loser),
-                            date = result.resultDate)for result in winList]
+        verifiedWin = [dict(result_id = result.result_id, result = "승", opponent = getPlayer(result.loser).playerName,
+                            date = None)for result in winList]
     if loseList:
-        verifiedLose = [dict(result_id = result.result_id, result = "패", opponent = getName(result.winner),
-                             date = result.resultDate)for result in loseList]
+        verifiedLose = [dict(result_id = result.result_id, result = "패", opponent = getPlayer(result.winner).playerName,
+                             date = None)for result in loseList]
+
 
     sendVerifiedList.append(verifiedWin)
     sendVerifiedList.append(verifiedLose)
     return sendVerifiedList
 
-def getName(id):
+def transferDate(date):
+    transfer = str(date.month)+"월"+""+str(date.day)+"일"
+    return transfer
+
+def getPlayer(id):
     player = Player.query.filter_by(player_id = id).first()
-    return player.playerName
+    return player
 
 
 ##취소로직 추가 필요
 @mod.route('/verify/', methods=['POST'])
 def verify():
-    verifiedId = request.form["result_id"]
-    verfiedMessage = request.form["status"]
-    verifiedResult = Result.query.filter_by(result_id = verifiedId).first()
+    try:
+        verifiedId = request.form["result_id"]
+        verfiedMessage = request.form["status"]
+        verifiedResult = Result.query.filter_by(result_id = verifiedId).first()
+
+        if verfiedMessage == "check":
+            verifiedResult.isVerified =1
+            winner = getPlayer(verifiedResult.winner)
+            winner.totalWin += 1
+            winner.plusTotalPoint += verifiedResult.winPoint
+
+            loser = getPlayer(verifiedResult.loser)
+            loser.totalLose += 1
+            loser.plusTotalPoint += verifiedResult.losePoint
+
+        if verfiedMessage == "cancel":
+            verifiedResult.isVerified =2
 
 
-    if verfiedMessage == "check":
-        verifiedResult.isVerified =1
-    if verfiedMessage == "cancel":
-        verifiedResult.isVerified =2
-
-    db.session.commit()
-    return "IS_VERIFIED"
+        db.session.commit()
+        return "IS_VERIFIED"
+    except:
+        return "IS_NOT_VERIFIED"

@@ -18,6 +18,7 @@ def index():
     else:
         notVerifiedList =[[],[]]
 
+    print notVerifiedList
     allPlayer = Player.query.order_by(Player.totalPoint.desc()).all()
     countNo = 1
     playerInfo = []
