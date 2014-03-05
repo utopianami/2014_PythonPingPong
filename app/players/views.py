@@ -38,7 +38,7 @@ def register():
         db.session.add(newPlayer)
         db.session.commit()
     session['player_id'] = newPlayer.getId()
-    return "session['player_id']"
+    return "SIGNUP_SUCCESS"
 
 
 @mod.route('/login', methods=['GET', 'POST'])
@@ -101,8 +101,8 @@ def personal(id):
 
     pushOverObject = Player.query.filter_by(player_id = pushOverPlayer).first()
     revengeObject = Player.query.filter_by(player_id = revengePlayer).first()
-    pushOverInfo = { "player" : pushOverObject.getPlayerName(), "win" : totalDict[pushOverPlayer]["win"], "lose" : totalDict[pushOverPlayer]["lose"], "point" :  totalDict[pushOverPlayer]["point"]}
-    revengeInfo = {"player" :revengeObject.getPlayerName(), "win" : totalDict[revengePlayer]["win"], "lose" : totalDict[revengePlayer]["lose"], "point" : totalDict[revengePlayer]["offerPoint"]}
+    pushOverInfo = { "player" : pushOverObject.getPlayerName(), "win" : totalDict[pushOverPlayer]["win"], "lose" : totalDict[pushOverPlayer]["lose"], "point" :  totalDict[pushOverPlayer]["point"], "id":pushOverObject.player_id}
+    revengeInfo = {"player" :revengeObject.getPlayerName(), "win" : totalDict[revengePlayer]["win"], "lose" : totalDict[revengePlayer]["lose"], "point" : totalDict[revengePlayer]["offerPoint"], "id" : revengeObject.player_id}
 
     if winTable.count() + loseTable.count() < 3:
         return render_template('personal_info.html', personalPageInfo = personalPageInfo, revengeInfo = None, pushOverInfo = None)
