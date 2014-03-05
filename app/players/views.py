@@ -52,7 +52,7 @@ def login():
             return "LOGIN_FAIL"
         if player.playerPassword == password:
             session['player_id'] = player.getId()
-            return "LOGIN_SUCCESS"
+            return "LOGIN_SUCCESS&"+player.getId()
 
     return "LOGIN_FAIL"
 
