@@ -45,11 +45,11 @@ class Player(db.Model):
         if rank is 4:
             return "Major"
         if rank is 3:
-            return "Triple A"
+            return "AAA"
         if rank is 2:
-            return "Double A"
+            return "AA"
         if rank is 1:
-            return "Single A"
+            return "A"
 
     def updateRank(self):
         if self.totalPoint >= 50:

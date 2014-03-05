@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c3e6875-8fe8-40d9-9ff8-5cd5525eeff6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/models.py" afterPath="$PROJECT_DIR$/app/players/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/players/views.py" afterPath="$PROJECT_DIR$/app/players/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -74,16 +75,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/players/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="8" selection-start="503" selection-end="503" vertical-scroll-proportion="0.13496144" vertical-offset="120" max-vertical-offset="1830">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/result/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+            <state line="108" column="0" selection-start="3697" selection-end="3697" vertical-scroll-proportion="0.8251928" vertical-offset="903" max-vertical-offset="1830">
               <folding />
             </state>
           </provider>
@@ -116,6 +108,15 @@
           </provider>
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/result/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="22" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -206,10 +207,10 @@
         <option value="$PROJECT_DIR$/app/static/js/custom.js" />
         <option value="$PROJECT_DIR$/pingpong.py" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/app/players/models.py" />
         <option value="$PROJECT_DIR$/app/result/views.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/checkRank.py" />
+        <option value="$PROJECT_DIR$/app/players/models.py" />
         <option value="$PROJECT_DIR$/app/players/views.py" />
       </list>
     </option>
@@ -801,7 +802,11 @@
       <created>1394015694238</created>
       <updated>1394015694238</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="id값 전달 str으로 전달">
+      <created>1394015835555</created>
+      <updated>1394015835555</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -871,7 +876,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="개인페이지 전송" />
     <MESSAGE value="main페이지에서 id 보내기" />
     <MESSAGE value="id에러 수정" />
     <MESSAGE value="개인기록 json 파일 수정 (이제 잘돌아가지롱  :D )" />
@@ -896,7 +900,8 @@
     <MESSAGE value="트랜잭션 구현 / 중복코드 제거 / index부분 filter_order로 구현" />
     <MESSAGE value="개인페이지 id전달" />
     <MESSAGE value="로그인 부분 return에서 id값 전달" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인 부분 return에서 id값 전달" />
+    <MESSAGE value="id값 전달 str으로 전달" />
+    <option name="LAST_COMMIT_MESSAGE" value="id값 전달 str으로 전달" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1109,11 +1114,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/signUp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="1606" selection-end="1606" vertical-scroll-proportion="-10.041667" vertical-offset="224" max-vertical-offset="1020" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/personal_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="17" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="1395">
@@ -1171,16 +1171,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/result/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="16" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.0" vertical-offset="212" max-vertical-offset="990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/players/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="120" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+        <state line="48" column="21" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.5259166" vertical-offset="289" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
@@ -1192,9 +1185,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/signUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="16" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.31962866" vertical-offset="224" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/result/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="22" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/players/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="503" selection-end="503" vertical-scroll-proportion="0.13496144" vertical-offset="120" max-vertical-offset="1830">
+        <state line="108" column="0" selection-start="3697" selection-end="3697" vertical-scroll-proportion="0.8251928" vertical-offset="903" max-vertical-offset="1830">
           <folding />
         </state>
       </provider>
