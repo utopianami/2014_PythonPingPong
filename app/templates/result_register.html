@@ -71,7 +71,7 @@
 	        		<td>{{ name}}</td>
 	        		<td>vs</td>
 	        		<td>
-	        			<select name="player2_id" class="form-control">
+	        			<select id="opponent-name" name="player2_id" class="form-control">
                             {%  for player in playerList  %}
 	        				<option value={{player.id}}>{{ player.name }}</option>
                             {% endfor %}
@@ -103,6 +103,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/docs.min.js"></script>
+    <script src="../static/js/custom.js"></script>
   
 
 </body></html>

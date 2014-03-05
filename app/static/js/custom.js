@@ -45,6 +45,7 @@ window.addEventListener("load", function(e) {
                 checkLoginValidation();
                 break;
             case idObj.resultSave:
+                e.preventDefault();
                 if (resultCheck(target) === true) {
                     target.submit();
                 }
@@ -160,7 +161,7 @@ function manageResult(rowId, isCancel) {
     } else {
         formData += "&status=2";
     }
-    debugger;
+
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var resultString = xhr.responseText;
@@ -191,5 +192,10 @@ function manageResult(rowId, isCancel) {
 }
 
 function resultCheck(target) {
+    if (document.getElementById("opponent-name").value === "") {
+        alert("상대가 없습니다.");
+        return false;
+    }
 
+    return true;
 }
