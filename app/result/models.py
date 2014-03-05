@@ -38,6 +38,3 @@ class Result(db.Model):
 
     def offerPoint(self):
         return self.winPoint
-
-    def setVerified(self):
-        self.isVerified = 1

@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from flask import Blueprint, request, render_template, session, redirect, url_for, json
 from app.result.models import Result
 from app.players.models import Player
@@ -49,8 +50,6 @@ def setRankPoint(winner, loser, result):
     except:
         db.session.rollback()
 
-    return point
-
 def checkRankPoint(playerGap, loser):
     bonusPoint = {-3:[6, 0], -2:[5, 0], -1:[4, -1], 0:[3, -2],
                  1:[2, -3], 2:[1, -4], 3:[1, -5]}
@@ -62,3 +61,39 @@ def checkRankPoint(playerGap, loser):
     point = [winnerPoint, loserPoint]
 
     return point
+
+def checkVerified(playerId):
+    winList  = Result.query.filter_by(winner = playerId, isVerified = 0)
+    loseList = Result.query.filter_by(loser = playerId, isVerified = 0)
+
+    sendVerifiedList = []
+    verifiedWin =[]
+    verifiedLose = []
+    if not winList ==False:
+        verifiedWin = [dict(result_id = result.result_id, result = "승", opponent = getName(result.loser), date = result.resultDate)for result in winList]
+    if not loseList ==False:
+        verifiedLose = [dict(result_id = result.result_id, result = "패", opponent = getName(result.win), date = result.resultDate)for result in loseList]
+
+    return sendVerifiedList[verifiedWin, verifiedLose]
+
+def getName(id):
+    player = Player.query.filter_by(player_id = id).first()
+    return player.playerName
+
+
+##취소로직 추가 필요
+@mod.route('/verify')
+def verify():
+    verifiedId = request.form["result_id"]
+    verfiedMessage = request.form["message"]
+    verifiedResult = Result.query.filter_by(result_id = verifiedId).first()
+
+
+    #requseet form type확인
+    if verfiedMessage == "check":
+        verifiedResult.isVerified =1
+    if verfiedMessage == "cancel":
+        verifiedResult.isVerified =2
+
+    db.session.commit()
+    return "IS_VERIFIED"
