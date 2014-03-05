@@ -90,7 +90,7 @@ def getPlayer(id):
 
 
 ##취소로직 추가 필요
-@mod.route('/verify/', methods=['POST'])
+@mod.route('/verify', methods=['POST'])
 def verify():
     try:
         verifiedId = request.form["result_id"]

@@ -38,7 +38,7 @@
 	     <div class="main">
            {% if verifiedWin or verifiedLose %}
            <h2 class="sub-header">미등록 전적</h2>
-           <div id="unregistered-result" data-row-num="5" class="table-responsive">
+           <div id="unregistered-result" data-row-num="{{ verifiedLose|length + verifiedWin|length }}" class="table-responsive">
                <table class="table table-striped">
                    <thead>
                        <tr>
@@ -56,8 +56,8 @@
                                <td>승</td>
                                <td>{{ row.opponent }}</td>
                                <td>{{ row.date }}</td>
-                               <td><button id="unregistered-result-ok-{{ row.result_id }}" type="button" class="btn btn-info btn-sm">확인</button></td>
-                               <td><button id="unregistered-result-cancel-{{ row.result_id }}" type="button" class="btn btn-danger btn-sm">취소</button></td>
+                               <td><button id="unregistered-result-ok" type="button" class="btn btn-info btn-sm">확인</button></td>
+                               <td><button id="unregistered-result-cancel" type="button" class="btn btn-danger btn-sm">취소</button></td>
                            </tr>
                        {% endfor %}
                    {% endif %}
@@ -67,8 +67,8 @@
                                <td>패</td>
                                <td>{{ row.opponent }}</td>
                                <td>{{ row.date }}</td>
-                               <td><button id="unregistered-result-ok-{{ row.result_id }}" type="button" class="btn btn-info btn-sm">확인</button></td>
-                               <td><button id="unregistered-result-cancel-{{ row.result_id }}" type="button" class="btn btn-danger btn-sm">취소</button></td>
+                               <td><button id="unregistered-result-ok" type="button" class="btn btn-info btn-sm">확인</button></td>
+                               <td><button id="unregistered-result-cancel" type="button" class="btn btn-danger btn-sm">취소</button></td>
                            </tr>
                        {% endfor %}
                    {% endif %}

@@ -138,11 +138,7 @@ function checkLoginValidation() {
                 document.getElementById("loginFailText").style.display = "initial";
                 document.getElementById("loginFieldEmptyText").style.display = "none";
             } else {
-                var playerId = resultString.split("&")[1];
-                document.getElementById("login-form").style.display = "none";
-                document.querySelector(".after_signin").style.display = "initial";
-                document.getElementById("player-register-btn").style.display = "none";
-                document.getElementById("href-personal-page").href = "/players/" + playerId;
+                window.location.href = "/";
             }
         }
     };
@@ -164,23 +160,24 @@ function manageResult(rowId, isCancel) {
     } else {
         formData += "&status=2";
     }
-
+    debugger;
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var resultString = xhr.responseText;
 
             if (resultString === "IS_VERIFIED") {
-                var unregisteredResultTable = document.getElementById("unregistered-result");
-                var numOfUnregisteredResult = unregisteredResultTable.getAttribute("data-row-num");
-
-                if (numOfUnregisteredResult === 1) {
-                    unregisteredResultTable.style.display = "none";
-                    return;
-                }
-
-                unregisteredResultTable.setAttribute("data-row-num", numOfUnregisteredResult - 1);
-                var targetRow = document.getElementById(rowId);
-                targetRow.style.display = "none";
+                window.location.href = "/";
+//                var unregisteredResultTable = document.getElementById("unregistered-result");
+//                var numOfUnregisteredResult = unregisteredResultTable.getAttribute("data-row-num");
+//                debugger;
+//                if (numOfUnregisteredResult === 1) {
+//                    unregisteredResultTable.style.display = "none";
+//                    return;
+//                }
+//
+//                unregisteredResultTable.setAttribute("data-row-num", numOfUnregisteredResult - 1);
+//                var targetRow = document.getElementById(rowId);
+//                targetRow.style.display = "none";
             } else {
                 alert("오류가 발생했습니다. 다시 접속해주세요.")
             }
@@ -189,7 +186,7 @@ function manageResult(rowId, isCancel) {
     };
 
     xhr.open("POST", url, false);
-    xhr.setRequestHeader("Content=Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send(formData);
 }
 
