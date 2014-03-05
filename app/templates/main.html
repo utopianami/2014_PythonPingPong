@@ -36,7 +36,7 @@
         <div id="player-register-btn" class="btn btn-warning btn-lg">선수 등록</div>
         {% endif %}
 	     <div class="main">
-           {% if verifiedWin and verifiedLose %}
+           {% if verifiedWin or verifiedLose %}
            <h2 class="sub-header">미등록 전적</h2>
            <div id="unregistered-result" data-row-num="5" class="table-responsive">
                <table class="table table-striped">
@@ -61,8 +61,8 @@
                            </tr>
                        {% endfor %}
                    {% endif %}
-                   {% if verifiedWinLose %}
-                       {% for row in loseList %}
+                   {% if verifiedLose %}
+                       {% for row in verifiedLose %}
                            <tr id="lose-row-{{ row.result_id }}">
                                <td>패</td>
                                <td>{{ row.opponent }}</td>
