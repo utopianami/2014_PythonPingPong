@@ -88,10 +88,10 @@ def getName(id):
 
 
 ##취소로직 추가 필요
-@mod.route('/verify')
+@mod.route('/verify/', methods=['POST'])
 def verify():
     verifiedId = request.form["result_id"]
-    verfiedMessage = request.form["message"]
+    verfiedMessage = request.form["status"]
     verifiedResult = Result.query.filter_by(result_id = verifiedId).first()
 
 
