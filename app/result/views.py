@@ -34,7 +34,7 @@ def saveResult():
         result = Result(player2.getId(), player1.getId())
         point = setRankPoint(player2, player1)
 
-
+    result.suggestResult = session['player_id']
     result.setPoint(point)
     db.session.add(result)
     db.session.commit()
@@ -60,8 +60,8 @@ def checkRankPoint(playerGap, loser):
     return point
 
 def checkVerified(playerId):
-    winList  = Result.query.filter_by(winner = playerId, isVerified = 0).all()
-    loseList = Result.query.filter_by(loser = playerId, isVerified = 0).all()
+    winList  = Result.query.filter(Result.winner == playerId, Result.isVerified == 0, Result.suggestResult != session['player_id']).all()
+    loseList = Result.query.filter(Result.loser == playerId, Result.isVerified == 0, Result.suggestResult != session['player_id']).all()
 
     sendVerifiedList = []
     verifiedWin =[]
