@@ -6,7 +6,10 @@ window.addEventListener("load", function(e) {
         playerRegister: "player-register-btn",
         sendMatchInvitationToPushover: "send-invitation-pushover",
         sendMatchInvitationToRevenge: "send-invitation-revenge",
-        gameResult: "game-result"
+        gameResult: "game-result",
+        unregisteredResultOk: "unregistered-result-ok",
+        unregisteredResultCancel: "unregistered-result-cancel",
+        resultSave: "result-register-form"
     };
 
     document.addEventListener("click", function(e) {
@@ -19,6 +22,12 @@ window.addEventListener("load", function(e) {
             case idObj.sendMatchInvitationToPushover:
             case idObj.sendMatchInvitationToRevenge:
                 alert("아직 준비중입니다. 정식 릴리즈때 찾아뵙겠습니다.");
+                break;
+            case idObj.unregisteredResultOk:
+                manageResult(target.parentNode.parentNode.id, false);
+                break;
+            case idObj.unregisteredResultCancel:
+                manageResult(target.parentNode.parentNode.id, true);
                 break;
         }
     }, false);
@@ -35,6 +44,10 @@ window.addEventListener("load", function(e) {
                 e.preventDefault();
                 checkLoginValidation();
                 break;
+            case idObj.resultSave:
+                if (resultCheck(target) === true) {
+                    target.submit();
+                }
 
         }
 
@@ -124,12 +137,12 @@ function checkLoginValidation() {
             if (resultString === "LOGIN_FAIL") {
                 document.getElementById("loginFailText").style.display = "initial";
                 document.getElementById("loginFieldEmptyText").style.display = "none";
-
             } else {
+                var playerId = resultString.split("&")[1];
                 document.getElementById("login-form").style.display = "none";
                 document.querySelector(".after_signin").style.display = "initial";
                 document.getElementById("player-register-btn").style.display = "none";
-                document.getElementById("href-personal-page").href = "/players/" + resultString;
+                document.getElementById("href-personal-page").href = "/players/" + playerId;
             }
         }
     };
@@ -137,4 +150,49 @@ function checkLoginValidation() {
     xhr.open("POST", url, false);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send(formData);
+}
+
+function manageResult(rowId, isCancel) {
+    var xhr = new XMLHttpRequest();
+    var url = "/result/verify";
+
+    var resultId = rowId.split("-")[2];
+    var formData = "result_id=" + resultId;
+
+    if (isCancel === false) {
+        formData += "&status=1";
+    } else {
+        formData += "&status=2";
+    }
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var resultString = xhr.responseText;
+
+            if (resultString === "IS_VERIFIED") {
+                var unregisteredResultTable = document.getElementById("unregistered-result");
+                var numOfUnregisteredResult = unregisteredResultTable.getAttribute("data-row-num");
+
+                if (numOfUnregisteredResult === 1) {
+                    unregisteredResultTable.style.display = "none";
+                    return;
+                }
+
+                unregisteredResultTable.setAttribute("data-row-num", numOfUnregisteredResult - 1);
+                var targetRow = document.getElementById(rowId);
+                targetRow.style.display = "none";
+            } else {
+                alert("오류가 발생했습니다. 다시 접속해주세요.")
+            }
+
+        }
+    };
+
+    xhr.open("POST", url, false);
+    xhr.setRequestHeader("Content=Type", "application/x-www-form-urlencoded");
+    xhr.send(formData);
+}
+
+function resultCheck(target) {
+
 }
