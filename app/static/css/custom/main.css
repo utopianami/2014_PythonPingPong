@@ -41,5 +41,6 @@ input.set-score {
 }
 
 .personal-opponent-info {
+    float : none;
     margin-bottom : 40px;
 }
