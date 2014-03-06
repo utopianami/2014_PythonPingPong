@@ -1,16 +1,16 @@
-window.addEventListener("load", function(e) {
+var idObj = {
+    loginValidation: "login-form",
+    signUpValidation: "signup-form",
+    playerRegister: "player-register-btn",
+    sendMatchInvitationToPushover: "send-invitation-pushover",
+    sendMatchInvitationToRevenge: "send-invitation-revenge",
+    gameResult: "game-result",
+    unregisteredResultOk: "unregistered-result-ok",
+    unregisteredResultCancel: "unregistered-result-cancel",
+    resultSave: "result-register-form"
+};
 
-    var idObj = {
-        loginValidation: "login-form",
-        signUpValidation: "signup-form",
-        playerRegister: "player-register-btn",
-        sendMatchInvitationToPushover: "send-invitation-pushover",
-        sendMatchInvitationToRevenge: "send-invitation-revenge",
-        gameResult: "game-result",
-        unregisteredResultOk: "unregistered-result-ok",
-        unregisteredResultCancel: "unregistered-result-cancel",
-        resultSave: "result-register-form"
-    };
+window.addEventListener("load", function(e) {
 
     document.addEventListener("click", function(e) {
         var target = e.target;
@@ -109,7 +109,7 @@ function changeOpponentResult() {
 
     var opponentResult = document.getElementById("opponent-result");
 
-    if (document.querySelector(idObj.gameResult).value === "win") {
+    if (document.getElementById(idObj.gameResult).value === "win") {
         opponentResult.innerHTML = "패배";
     } else {
         opponentResult.innerHTML = "승리";
@@ -168,17 +168,6 @@ function manageResult(rowId, isCancel) {
 
             if (resultString === "IS_VERIFIED") {
                 window.location.href = "/";
-//                var unregisteredResultTable = document.getElementById("unregistered-result");
-//                var numOfUnregisteredResult = unregisteredResultTable.getAttribute("data-row-num");
-//                debugger;
-//                if (numOfUnregisteredResult === 1) {
-//                    unregisteredResultTable.style.display = "none";
-//                    return;
-//                }
-//
-//                unregisteredResultTable.setAttribute("data-row-num", numOfUnregisteredResult - 1);
-//                var targetRow = document.getElementById(rowId);
-//                targetRow.style.display = "none";
             } else {
                 alert("오류가 발생했습니다. 다시 접속해주세요.")
             }
