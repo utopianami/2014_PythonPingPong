@@ -46,7 +46,7 @@
         <!-- Example row of columns -->
         {% if not revengeInfo and not pushOverInfo%}
         <div class="row">
-            <h1>세부 상대 전적은 <strong>3 경기</strong> 이후부터 표시됩니다. <small>분발해라 뉴비야 :P</small></h1>
+            <h1>세부 상대 전적은 <strong>3 경기</strong> 이후부터 표시됩니다.<br /> <small>분발해라 뉴비야 :P</small></h1>
         </div>
         {% else %}
         <div class="row">
@@ -66,7 +66,7 @@
                 {% if not revengeInfo %}
                     <h4>이 바닥에 당신을 만만히 보는 사람은 없습니다.<br /> <small>제법인걸...</small></h4>
                 {% else %}
-                <h4><a href="/players/{{ revengeInfo.id }}"></a>{{ revengeInfo.player }}</h4>
+                <h4><a href="/players/{{ revengeInfo.id }}">{{ revengeInfo.player }}</a></h4>
                 <p>상대 전적 : {{ revengeInfo.win }}승 {{ revengeInfo.lose }}패</p>
                 <p>내가 조공한 승점 : {{ revengeInfo.point }}점</p>
                 <p><a onclick="alert('준비중입니다. 다음 릴리즈때 찾아뵙겠습니다.');" id="send-invitation-revenge" class="btn btn-primary btn-lg" role="button">복수의 칼날 되돌려주기&raquo;</a></p>
